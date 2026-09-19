@@ -109,7 +109,8 @@ footer{
 .ld-btn:hover{background:rgba(132,141,146,.26);border-color:var(--gold);transform:scale(1.03)}
 .ld-btn::after{content:'';display:block;position:absolute;inset:-1px;border-radius:40px;border:1px solid rgba(132,141,146,.35);animation:ldBreathe 2.4s ease-in-out 1.5s infinite;pointer-events:none;}
 @keyframes ldBreathe{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.08);opacity:0}}
-.ld-video-layer{position:absolute;inset:0;z-index:5;opacity:0;pointer-events:none;transition:opacity .4s ease;}
+.ld-video-layer{position:absolute;inset:0;z-index:5;opacity:0;pointer-events:none;transition:opacity .55s ease;}
+#escenaLayer{z-index:6}
 .ld-video-layer.active{opacity:1;pointer-events:auto}
 .ld-sobre-video{width:100%;height:100%;object-fit:cover;background:#F7E7CE}
 @keyframes ldFade{to{opacity:1}}
@@ -758,7 +759,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   width:1px;align-self:stretch;min-height:118px;
   background:linear-gradient(180deg,transparent,rgba(132,141,146,.45) 18%,rgba(132,141,146,.45) 82%,transparent);
 }
-.dc-avoid-block{margin-top:10px;}
+.dc-avoid-block{margin-top:10px;text-align:center;}
 .dc-avoid{
   font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;
   letter-spacing:.8px;color:var(--silver-ink);margin-top:6px;
@@ -1286,6 +1287,11 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
       <div class="wheel-card"><img src="./gal-2.jpg" alt="Raiza y Orlando" loading="eager"></div>
       <div class="wheel-card"><img src="./gal-3.jpg" alt="Raiza" loading="eager"></div>
       <div class="wheel-card"><img src="./gal-4.jpg" alt="Orlando" loading="eager"></div>
+      <div class="wheel-card"><img src="./gal-1.jpg" alt="" aria-hidden="true" loading="eager"></div>
+      <div class="wheel-card"><img src="./gal-2.jpg" alt="" aria-hidden="true" loading="eager"></div>
+      <div class="wheel-card"><img src="./gal-3.jpg" alt="" aria-hidden="true" loading="eager"></div>
+      <div class="wheel-card"><img src="./gal-4.jpg" alt="" aria-hidden="true" loading="eager"></div>
+    </div>
     </div>
   </div>
   <p class="gal-hint">Arrastra para girar</p>
@@ -1528,10 +1534,10 @@ function openEnvelope() {
   // La escena se va bajando mientras corre el video del sobre, para que no haya pausa
   try { document.getElementById('escenaVideo').load(); } catch(e) {}
   if (pp !== undefined) {
-    pp.then(() => { vid.addEventListener('ended', () => setTimeout(startBusScene, 300), { once: true }); })
+    pp.then(() => { vid.addEventListener('ended', () => setTimeout(startBusScene, 120), { once: true }); })
       .catch(() => setTimeout(startBusScene, 600));
   } else {
-    vid.addEventListener('ended', () => setTimeout(startBusScene, 300), { once: true });
+    vid.addEventListener('ended', () => setTimeout(startBusScene, 120), { once: true });
   }
   setTimeout(() => { if (document.getElementById('loader')) startBusScene(); }, 16000);
 }
@@ -1567,31 +1573,52 @@ function startBusScene() {
     if (skip) skip.classList.remove('on');
     dismissLoader();
     if (flash && typeof gsap !== 'undefined') {
-      gsap.to(flash, { opacity: 0, duration: 1.1, delay: .2, ease: 'power2.out' });
+      gsap.to(flash, { opacity: 0, duration: 1.4, delay: .45, ease: 'power2.inOut' });
     } else if (flash) {
-      setTimeout(() => { flash.style.transition = 'opacity 1.1s ease'; flash.style.opacity = '0'; }, 200);
+      setTimeout(() => { flash.style.transition = 'opacity 1.4s ease'; flash.style.opacity = '0'; }, 450);
     }
   };
 
   let fellBack = false;
   const fallback = () => {
-    if (handed || fellBack) return;
+    if (handed || fellBack || vid.currentTime > 0) return;
     fellBack = true;
     busSceneStarted = false;
     layer.classList.remove('active');
     startBusSceneFallback();
   };
 
-  if (sobre) sobre.classList.remove('active');
-  layer.classList.add('active');
+  // El sobre se queda debajo hasta que la escena ESTA pintando, si no se ve
+  // un parpadeo del fondo entre un video y otro.
+  let revealed = false;
+  const reveal = () => {
+    if (revealed) return;
+    revealed = true;
+    layer.classList.add('active');
+    setTimeout(() => { if (sobre) sobre.classList.remove('active'); }, 600);
+  };
+
   if (skip) {
     skip.addEventListener('click', hand, { once: true });
-    setTimeout(() => skip.classList.add('on'), 900);
+    setTimeout(() => skip.classList.add('on'), 1400);
   }
+
+  vid.addEventListener('playing', reveal, { once: true });
   vid.addEventListener('ended', hand, { once: true });
   vid.addEventListener('error', fallback, { once: true });
+
+  // El relevo arranca medio segundo antes del final: para entonces el cuadro
+  // ya es blanco, asi que el cambio a la invitacion ocurre bajo esa pantalla.
+  vid.addEventListener('timeupdate', () => {
+    if (!handed && vid.duration && vid.currentTime >= vid.duration - 0.5) hand();
+  });
+
   const pp = vid.play();
-  if (pp !== undefined) pp.catch(fallback);
+  if (pp !== undefined) pp.then(reveal).catch(fallback);
+  setTimeout(reveal, 1000);   // respaldo por si 'playing' no llega
+
+  // La invitacion se va pintando detras mientras corre la escena
+  try { new Image().src = 'hero-bg.jpg'; } catch (e) {}
 
   // Red de seguridad por reloj real: la invitacion siempre aparece.
   // Debe ser mayor que la duracion del video (16 s) o lo corta a media escena.
@@ -2335,7 +2362,10 @@ function initWheel() {
   // se encavalgan y en pantalla grande la rueda queda deshilachada.
   function radiusFor() {
     var w = ring.clientWidth || 375;
-    return Math.max(150, Math.min(240, w * 0.52));
+    var cw = (cards[0] && cards[0].offsetWidth) || 170;
+    // Radio minimo para que N tarjetas de ancho cw no se encimen, + 12% de aire
+    var minR = (cw / (2 * Math.tan(Math.PI / n))) * 1.12;
+    return Math.max(minR, Math.min(320, w * 0.62));
   }
   var radius = radiusFor();
 
