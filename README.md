@@ -14,13 +14,13 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 
 | Archivo | Uso |
 |---|---|
-| `sobre.png` / `sobre.mp4` | Sobre de apertura — **placeholder del template**, pendiente el del cliente |
+| `sobre.jpg` / `sobre.mp4` | Sobre del cliente: champán con sello de cera sage "R&O" |
 | `novia.png` / `novio.png` | Personajes ilustrados de la escena de los camiones |
 | `camion-novia.png` / `camion-novio.png` | Los dos camiones (champán y sage) |
 | `hero-bg.jpg`, `bg-sage-1..4.jpg` | Fondos botánicos derivados de la tarjeta del cliente |
 | `venue-1.jpg` / `venue-2.jpg` | Restaurante Columbia (exterior / interior) |
 | `gal-1..4.jpg` | Galería ilustrada |
-| `og.jpg` | Open Graph 1200×630 |
+| `og.jpg` | Open Graph 1200×630 — encuadre cerrado al sobre y al sello |
 
 ## Escena de los camiones
 
@@ -45,7 +45,6 @@ Sin WhatsApp. Cada invitado abre `?para=Nombre&pases=N`. Fecha límite: 25 de se
 
 ## Pendientes
 
-- Sobre y sello del cliente (hoy va el del template, con iniciales C&A en la cera).
 - Padres de los novios y padrinos (hoy "Por confirmar").
 - Link real del álbum compartido para el QR.
 - Fotos reales de la pareja (la galería usa las ilustraciones).
