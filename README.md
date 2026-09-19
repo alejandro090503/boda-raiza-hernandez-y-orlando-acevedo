@@ -14,7 +14,8 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 
 | Archivo | Uso |
 |---|---|
-| `sobre.jpg` / `sobre.mp4` | Sobre del cliente: champán con sello de cera sage "R&O" |
+| `sobre.jpg` / `sobre.mp4` | Sobre del cliente: champán con sello de cera sage "R&O" (8 s) |
+| `escena.mp4` | Escena del cliente en video (16 s): llegan los camiones, bajan los novios, se encuentran y se besan; termina en blanco |
 | `novia.png` / `novio.png` | Personajes ilustrados de la escena de los camiones |
 | `camion-novia.png` / `camion-novio.png` | Los dos camiones (champán y sage) |
 | `hero-bg.jpg`, `bg-sage-1..4.jpg` | Fondos botánicos: eucalipto acuarela sobre champán, siempre por reducción desde la fuente (nunca ampliados, o se ven borrosos) |
@@ -24,11 +25,17 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 
 ## Escena de los camiones
 
-Pedido explícito del cliente. Corre entre el video del sobre y la invitación
-(`startBusScene()` en `index.html`): los dos camiones llegan de lados opuestos y se
-estacionan de frente, bajan los novios, caminan al centro, se besan y un destello da paso
-a la invitación. Tiene botón **Saltar** y dos redes de seguridad (GSAP + `setTimeout`) para
-que la invitación siempre aparezca aunque `requestAnimationFrame` se congele.
+Pedido explícito del cliente. Corre entre el video del sobre y la invitación.
+
+`startBusScene()` reproduce **`escena.mp4`** (dos clips generados en Flow, unidos con
+cross-dissolve y fundido final a blanco). Si el video no puede reproducirse — autoplay
+bloqueado, 404, codec — cae a `startBusSceneFallback()`, la misma escena animada con GSAP
+y PNGs (`novia.png`, `novio.png`, `camion-*.png`).
+
+Botón **Saltar** y tres redes de seguridad para que la invitación aparezca siempre:
+`setTimeout(hand, 19000)` (mayor que los 16 s del video), el respaldo GSAP, y dentro de
+`dismissLoader()` un `setTimeout(initMain, 1800)` por si `requestAnimationFrame` se congela
+y el `onComplete` de GSAP nunca corre.
 
 ## Música
 

@@ -183,7 +183,7 @@ footer{
 }
 .bs-spark{position:absolute;border-radius:50%;pointer-events:none;opacity:0;}
 .bs-skip{
-  position:absolute;right:16px;bottom:18px;z-index:9;
+  position:absolute;right:16px;bottom:18px;z-index:20;
   padding:9px 18px;border-radius:30px;border:1px solid rgba(132,141,146,.55);
   background:rgba(251,243,230,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
   font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;letter-spacing:3px;
@@ -734,6 +734,13 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
     <video class="ld-sobre-video" id="sobreVideo" src="sobre.mp4" muted playsinline preload="auto"></video>
   </div>
 
+  <!-- Escena del cliente: llegan los camiones y bajan los novios -->
+  <div class="ld-video-layer" id="escenaLayer">
+    <video class="ld-sobre-video" id="escenaVideo" src="escena.mp4" muted playsinline preload="none"></video>
+  </div>
+
+  <button class="bs-skip" id="bsSkip" type="button">Saltar</button>
+
   <!-- ESCENA: los camiones, el encuentro y el beso -->
   <div id="busScene" aria-hidden="true">
     <div class="bs-stage" id="bsStage">
@@ -767,7 +774,6 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
         </svg>
       </div>
 
-      <button class="bs-skip" id="bsSkip" type="button">Saltar</button>
     </div>
   </div>
 </div>
@@ -1401,6 +1407,8 @@ function openEnvelope() {
   if (!vid) { setTimeout(startBusScene, 600); return; }
   const pp = vid.play();
   layer.classList.add('active');
+  // La escena se va bajando mientras corre el video del sobre, para que no haya pausa
+  try { document.getElementById('escenaVideo').load(); } catch(e) {}
   if (pp !== undefined) {
     pp.then(() => { vid.addEventListener('ended', () => setTimeout(startBusScene, 300), { once: true }); })
       .catch(() => setTimeout(startBusScene, 600));
@@ -1415,7 +1423,64 @@ function openEnvelope() {
    opuestos, bajan los novios, se encuentran, se besan y un
    destello elegante da paso a la invitacion.                */
 let busSceneStarted = false;
+
+/* Escena del cliente en video. Si el video no puede reproducirse
+   (autoplay bloqueado, 404, codec), cae a la animacion GSAP.      */
 function startBusScene() {
+  if (busSceneStarted) return;
+  busSceneStarted = true;
+
+  const vid   = document.getElementById('escenaVideo');
+  const layer = document.getElementById('escenaLayer');
+  const sobre = document.getElementById('videoLayer');
+  const flash = document.getElementById('flashLayer');
+  const skip  = document.getElementById('bsSkip');
+  if (!vid || !layer) { startBusSceneFallback(); return; }
+
+  let handed = false;
+  const hand = () => {
+    if (handed) return;
+    handed = true;
+    // El video ya termina en blanco: cubrimos el relevo con la misma pantalla
+    if (flash) {
+      flash.style.background = '#FFFFFF';
+      flash.style.opacity = '1';
+    }
+    if (skip) skip.classList.remove('on');
+    dismissLoader();
+    if (flash && typeof gsap !== 'undefined') {
+      gsap.to(flash, { opacity: 0, duration: 1.1, delay: .2, ease: 'power2.out' });
+    } else if (flash) {
+      setTimeout(() => { flash.style.transition = 'opacity 1.1s ease'; flash.style.opacity = '0'; }, 200);
+    }
+  };
+
+  let fellBack = false;
+  const fallback = () => {
+    if (handed || fellBack) return;
+    fellBack = true;
+    busSceneStarted = false;
+    layer.classList.remove('active');
+    startBusSceneFallback();
+  };
+
+  if (sobre) sobre.classList.remove('active');
+  layer.classList.add('active');
+  if (skip) {
+    skip.addEventListener('click', hand, { once: true });
+    setTimeout(() => skip.classList.add('on'), 900);
+  }
+  vid.addEventListener('ended', hand, { once: true });
+  vid.addEventListener('error', fallback, { once: true });
+  const pp = vid.play();
+  if (pp !== undefined) pp.catch(fallback);
+
+  // Red de seguridad por reloj real: la invitacion siempre aparece.
+  // Debe ser mayor que la duracion del video (16 s) o lo corta a media escena.
+  setTimeout(hand, 19000);
+}
+
+function startBusSceneFallback() {
   if (busSceneStarted) return;
   busSceneStarted = true;
 
@@ -1561,14 +1626,25 @@ function dismissLoader() {
   if (!loader || loaderDismissed) return;
   loaderDismissed = true;
   playMusicNow();
-  gsap.to(loader, {
-    opacity: 0, duration: .6, ease: 'power2.out',
-    onComplete() {
-      loader.remove();
-      addSectionWaves(); addSectionMedals(); addCorners(); addWindOrns(); addAuras();
-      heroAnim(); spawnParticles(); spawnAmbient(); scrollAnims();
-    }
-  });
+
+  // El init NO puede depender solo del onComplete de GSAP: si rAF se congela
+  // (pestana en segundo plano, webview lenta) la invitacion nunca aparecia.
+  let initDone = false;
+  const initMain = () => {
+    if (initDone) return;
+    initDone = true;
+    loader.remove();
+    addSectionWaves(); addSectionMedals(); addCorners(); addWindOrns(); addAuras();
+    heroAnim(); spawnParticles(); spawnAmbient(); scrollAnims();
+  };
+
+  if (typeof gsap !== 'undefined') {
+    gsap.to(loader, { opacity: 0, duration: .6, ease: 'power2.out', onComplete: initMain });
+  } else {
+    loader.style.transition = 'opacity .6s ease';
+    loader.style.opacity = '0';
+  }
+  setTimeout(initMain, 1800);   // reloj real
 }
 
 /* ── SCROLL PROGRESS ─────────────────────────────────── */
