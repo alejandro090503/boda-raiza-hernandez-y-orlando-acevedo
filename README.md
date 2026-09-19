@@ -20,7 +20,8 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 | `camion-novia.png` / `camion-novio.png` | Los dos camiones (champán y sage) |
 | `hero-bg.jpg`, `bg-sage-1..4.jpg` | Fondos botánicos: eucalipto acuarela sobre champán, siempre por reducción desde la fuente (nunca ampliados, o se ven borrosos) |
 | `venue-1.jpg` / `venue-2.jpg` | Restaurante Columbia (exterior / interior) |
-| `gal-1..4.jpg` | Galería ilustrada |
+| `gal-1..4.jpg` | Galería ilustrada (carrusel 3D) |
+| `caballero.png` / `dama.png` | Figuras del código de vestimenta |
 | `og.jpg` | Open Graph 1200×630 — encuadre cerrado al sobre y al sello |
 
 ## Escena de los camiones
@@ -44,6 +45,17 @@ El mp3 **nunca** va en el repo: se sirve desde Supabase Storage con `preload="no
 ```
 https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-raiza-hernandez-y-orlando-acevedo/cancion.mp3
 ```
+
+## Secciones traídas de otras invitaciones
+
+| Sección | Base | Nota |
+|---|---|---|
+| Código de vestimenta | `boda-fabiola-y-fernando` | Figuras caballero/dama + círculos de colores a evitar |
+| Galería | `boda-veronica-y-andres` | Rueda 3D con arrastre e inercia. **Sin `loading="lazy"`**: en tarjetas con `translateZ` nunca dispara y quedan vacías. Radio calculado del ancho real |
+| Lluvia de sobres | `boda-jeffersson-y-vanessa` | Sobres que caen; uno aterriza al entrar la sección y se abre al tocarlo. Sello R&O en sage |
+
+La card de "Cena" que estaba en regalos se eliminó; el dato de las bebidas pasó al
+itinerario, bajo la Cena de las 7:30.
 
 ## RSVP
 
