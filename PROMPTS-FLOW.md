@@ -75,9 +75,15 @@ glide to a gentle stop facing each other with a gap in the centre, suspension se
 a soft bounce.
 
 Second half of the shot: the folding door of the champagne-cream bus opens and the BRIDE steps
-down onto the street holding her bouquet; at the same moment the door of the sage-green bus
-opens and the GROOM steps down adjusting his bow tie. Both are seen full body, small in the
-tall frame, and turn to look toward the centre. Tiny motes of light drift down through the air.
+down onto the street — she has LONG VIVID RED HAIR, bright red-copper, clearly visible, and
+wears an elegant ivory-white satin wedding gown with a sheer veil, holding her bouquet. At the
+same moment the door of the sage-green bus opens and the GROOM steps down — he is COMPLETELY
+BALD, with a FULL DARK BEARD, and wears an elegant black wedding tuxedo with a black bow tie,
+adjusting it as he lands. Both are seen full body in the tall frame and turn to look toward the
+centre. Tiny motes of light drift down through the air.
+
+IMPORTANT, do not deviate: the bride's hair must be RED. The groom must be BALD with a BEARD —
+no hair on his head at all. Both must wear elegant formal wedding attire.
 ```
 
 ## CLIP 2 · Caminan, se encuentran y se besan (8 s)
