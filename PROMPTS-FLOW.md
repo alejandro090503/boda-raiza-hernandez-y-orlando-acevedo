@@ -105,6 +105,10 @@ Final part of the shot: they stop face to face in the centre of the vertical fra
 cups her cheek, they lean in and share a tender romantic kiss. The camera has pushed in to a
 full-body-to-waist framing, the couple centred, foliage still arching overhead. Her veil lifts
 slightly in the breeze. Soft petals and light motes drift past. Tender and unhurried.
+
+IMPORTANT, do not deviate: the bride's hair must be RED. The groom must be BALD with a BEARD —
+no hair on his head at all. Both must wear elegant formal wedding attire. Keep both faces
+exactly as in the previous shot.
 ```
 
 ## CLIP 3 · El destello que da paso a la invitación (8 s)
@@ -124,6 +128,10 @@ Final part of the shot: a soft elegant burst of warm white light blooms outward 
 them, expanding up and down the vertical frame until it fills the whole screen and everything
 dissolves into a clean soft cream-white. The shot ends on a plain warm cream-white surface,
 completely empty and evenly lit, edge to edge. No text, no objects.
+
+IMPORTANT, do not deviate: the bride's hair must be RED. The groom must be BALD with a BEARD —
+no hair on his head at all. Both must wear elegant formal wedding attire. Keep both faces
+exactly as in the previous shot.
 ```
 
 > El clip 3 termina en crema plano a propósito: así empalma sin corte con el fondo champán
