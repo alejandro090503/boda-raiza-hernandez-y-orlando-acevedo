@@ -9,7 +9,7 @@ blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se esta
 
 | Problema | Causa | Corrección en el prompt |
 |---|---|---|
-| Los novios salían del cofre, del espejo y de la parrilla | Los camiones quedaron **de frente a la cámara**; las puertas van en el costado y nunca estuvieron en cuadro, así que Veo inventó por dónde salir | La cámara se planta **al costado de la carretera**: los camiones se ven **de perfil**, con la puerta del conductor de cara a nosotros |
+| Los novios salían del cofre, del espejo y de la parrilla | Los camiones quedaron **de frente a la cámara**; las puertas van en el costado y nunca estuvieron en cuadro, así que Veo inventó por dónde salir | Cámara **en tres cuartos**, a un lado y un poco arriba: se ve el **frente a frente** de las parrillas Y la **puerta del conductor** de cada cabina |
 | Los personajes se materializaban de la nada | El prompt nunca describió la mecánica | Se describe paso a paso: la puerta **se abre hacia la cámara** → aparecen **parados en el hueco de la puerta** → bajan **los escalones** → pisan el suelo |
 | Look de render 3D | El estilo pedía "3D animated" | Estilo nuevo: **animación 2D dibujada a mano** |
 
@@ -20,7 +20,7 @@ blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se esta
 | **Relación de aspecto** | **9:16 vertical** — seleccionarlo en Flow; el prompt solo no basta |
 | Resolución / duración | 720×1280, 24 fps, 8 s |
 | Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 y el 3 |
-| Ingredientes | `novia.png`, `novio.png` y la foto del Peterbilt blanco |
+| Ingredientes | `novia.png`, `novio.png` y la foto del camión blanco (solo como referencia de look; el tamaño va **mediano**) |
 | Negative prompt | `giant truck, oversized truck, long sleeper cab, monster truck, 3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
 
 **Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres prompts.
@@ -77,7 +77,7 @@ Each cab has a CLEARLY DRAWN DRIVER DOOR on its side, with a window, a door hand
 rail, and two chrome climbing steps below it. The door is an obvious, visible feature.
 Both trucks are pearl-white with chrome, painted in watercolour with ink outlines. The
 BRIDE's truck has champagne-cream pinstriping; the GROOM's truck has silver pinstriping.
-These are big rigs, not buses and not vans.
+They are trucks, not buses and not vans — and medium-sized, never oversized.
 ```
 
 ---
