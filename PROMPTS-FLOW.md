@@ -1,83 +1,79 @@
 # Prompts de Flow — escena de los camiones (Raiza & Orlando)
 
-**Tres clips, formato vertical 9:16.** Todo es **animación 3D tipo película animada**, no
-imagen real. Los camiones son **tractocamiones americanos de trompa larga tipo Peterbilt 389,
-blancos con cromo** (la referencia que mandó el cliente) pero **dibujados**, no fotográficos.
+**Tres clips, vertical 9:16, animación 2D dibujada a mano** (acuarela/gouache, tipo cuento
+ilustrado). Los camiones son tractocamiones americanos de trompa larga tipo **Peterbilt 389**,
+blancos con cromo — pero **dibujados en 2D**, no renders 3D ni fotografía.
 
-| Clip | Qué pasa | Tiempos dentro del clip |
+## Qué salió mal en el intento anterior y cómo se corrige
+
+| Problema | Causa | Corrección en el prompt |
 |---|---|---|
-| 1 | Llegan los camiones y bajan los novios | 0-4 s llegan y se estacionan · 4-8 s se abren las puertas y bajan |
-| 2 | Caminan, se encuentran y se besan | 0-5 s caminan al centro · 5-8 s se encuentran y se besan |
-| 3 | El destello que da paso a la invitación | 0-3 s el beso sostenido · 3-8 s chispas y destello a blanco |
+| Los novios salían del cofre, del espejo y de la parrilla | Los camiones quedaron **de frente a la cámara**; las puertas van en el costado y nunca estuvieron en cuadro, así que Veo inventó por dónde salir | La cámara se planta **al costado de la carretera**: los camiones se ven **de perfil**, con la puerta del conductor de cara a nosotros |
+| Los personajes se materializaban de la nada | El prompt nunca describió la mecánica | Se describe paso a paso: la puerta **se abre hacia la cámara** → aparecen **parados en el hueco de la puerta** → bajan **los escalones** → pisan el suelo |
+| Look de render 3D | El estilo pedía "3D animated" | Estilo nuevo: **animación 2D dibujada a mano** |
 
 ## Ajustes en Flow (iguales para los 3 clips)
 
 | Ajuste | Valor |
 |---|---|
-| **Relación de aspecto** | **9:16 vertical** — hay que seleccionarlo en Flow, el prompt solo no basta |
-| Resolución / duración | 720×1280, 24 fps, 8 s (igual que `sobre.mp4`) |
+| **Relación de aspecto** | **9:16 vertical** — seleccionarlo en Flow; el prompt solo no basta |
+| Resolución / duración | 720×1280, 24 fps, 8 s |
 | Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 y el 3 |
-| Ingredientes | Subir `novia.png`, `novio.png` y **la foto del Peterbilt blanco** como referencia |
-| Negative prompt | `photorealistic, photograph, live action footage, hyperrealistic, real people, documentary, cctv, skin pores, bus, minibus, van, vintage bus, coach, trailer, semi trailer, cargo box, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, distorted faces, extra limbs, extra fingers, blurry, low quality, shaky camera, modern city, traffic, crowd` |
+| Ingredientes | `novia.png`, `novio.png` y la foto del Peterbilt blanco |
+| Negative prompt | `3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
 
-**Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres
-prompts. Si los parafraseas, Veo devuelve otra cara y otro camión.
+**Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres prompts.
 
-**Encadenado:** exportar el último frame del clip 1 y usarlo como *first frame* del clip 2, y
-lo mismo del 2 al 3. Sin eso saltan la luz y las posiciones.
+**Encadenado:** último frame del clip 1 como *first frame* del clip 2, y del 2 al 3.
 
 ---
-
-## [PERSONAJES] — bloque fijo, va en los 3 prompts
-
-```
-CHARACTERS (keep identical in every shot) — ANIMATED CARTOON CHARACTERS, like a 3D animated
-feature film. Charming and elegant, never photorealistic.
-BRIDE — stylized animated woman with soft rounded features: LONG VIVID RED-COPPER HAIR, fair
-skin, rosy cheeks, big expressive blue eyes, warm gentle smile. Fitted ivory-white satin
-wedding gown with off-shoulder neckline and a small train, sheer veil, pearl necklace,
-holding a compact bouquet of champagne-cream roses with sage green leaves.
-GROOM — stylized animated man with soft rounded features: COMPLETELY BALD smooth head, FULL
-well-groomed dark brown beard and moustache, warm skin, kind blue eyes, friendly smile.
-Black slim tuxedo, black bow tie, crisp white shirt, white pocket square.
-The groom is slightly taller than the bride. Both are clearly drawn/rendered characters with
-smooth matte shading — no skin pores, no photographic detail.
-```
-
-## [CAMIONES] — bloque fijo, va en los 3 prompts
-
-```
-TRUCKS (keep identical in every shot) — STYLIZED ANIMATED VERSIONS, not photoreal models:
-Two AMERICAN LONG-NOSE SHOW SEMI TRUCKS drawn in the same cartoon 3D style as the characters,
-with softly rounded edges and chunky friendly proportions. Classic Peterbilt 389 shape: very long squared
-hood, tall vertical chrome bar grille, massive polished chrome front bumper, chrome sun
-visor over the windshield, TWO TALL POLISHED CHROME EXHAUST STACKS rising vertically behind
-the cab, large square sleeper box behind the cab, polished aluminium wheels with chrome hubs.
-BOBTAIL — no trailer attached, just the tractor unit.
-Both trucks are glossy pearl-white, immaculate, with abundant bright stylized chrome —
-rendered like a cartoon, clean and simplified, never like a photograph of a real truck.
-The BRIDE's truck carries delicate champagne-cream pinstriping; the GROOM's truck carries
-delicate sage-green pinstriping. Nothing else differs between them.
-These are big rigs, not buses and not vans.
-```
 
 ## [ESTILO] — bloque fijo, va en los 3 prompts
 
 ```
 FORMAT: vertical 9:16 portrait video, tall frame. Compose for a phone screen: the action sits
-in the lower-middle third, with open sky and overhanging foliage filling the upper third.
-Never compose this as a wide horizontal shot.
+in the lower-middle third, sky and overhanging flowers fill the upper third. Never compose
+this as a wide horizontal shot.
 
-STYLE — THIS IS A 3D ANIMATED CARTOON, NOT LIVE ACTION AND NOT PHOTOREALISTIC.
-Look and feel of a modern animated feature film (Pixar / Disney style): stylized characters
-and vehicles with soft rounded forms, clean simplified surfaces, slightly exaggerated
-proportions, big expressive eyes, smooth matte shading, no skin pores, no photographic
-texture, no real people. Everything is rendered, illustrated, charming and warm.
+STYLE — 2D HAND-DRAWN ANIMATION. This is a traditional hand-drawn cartoon, like an animated
+storybook or a classic 2D animated film. Flat 2D artwork: clean confident ink outlines, soft
+watercolour and gouache washes, visible paper texture, simple painted shapes, flat cel
+shading with gentle gradients. Absolutely NOT 3D, NOT CGI, NOT a render, NOT photorealistic —
+no plastic surfaces, no ray-traced reflections, no lens depth-of-field blur.
 
-Elegant wedding-invitation animation, soft cinematic lighting, warm golden hour glow.
-Colour palette strictly champagne cream (#F7E7CE), sage green (#a8b8a9) and soft silver
-(#C0C0C0), with bright stylized chrome on the trucks. Dreamy shallow depth of field, floating
-specks of light. Smooth, slow, romantic motion. No text anywhere.
+Elegant wedding-invitation illustration, warm golden light painted into the artwork.
+Colour palette strictly champagne cream (#F7E7CE) and soft silver (#C0C0C0), with sage green
+foliage. Plenty of hand-painted flowers framing the frame. Hand-painted sparkles. Smooth,
+slow, romantic motion. No text anywhere.
+```
+
+## [PERSONAJES] — bloque fijo, va en los 3 prompts
+
+```
+CHARACTERS (keep identical in every shot) — 2D hand-drawn animated characters, elegant and
+charming, painted in watercolour with clean ink outlines.
+BRIDE — LONG BRIGHT TRUE-RED HAIR, vivid crimson red, dyed red (not orange, not ginger, not
+auburn), fair skin, rosy cheeks, large expressive eyes, warm gentle smile. Fitted ivory-white
+satin wedding gown with off-shoulder neckline and a small train, sheer veil, pearl necklace,
+holding a compact bouquet of champagne-cream roses with sage green leaves.
+GROOM — COMPLETELY BALD smooth head, FULL well-groomed dark brown beard and moustache, warm
+skin, kind eyes, friendly smile. Elegant cream-beige suit with a tie and a crisp white shirt.
+The groom is slightly taller than the bride. Both are drawn, never photographic.
+```
+
+## [CAMIONES] — bloque fijo, va en los 3 prompts
+
+```
+TRUCKS (keep identical in every shot) — HAND-DRAWN 2D illustrations of American long-nose
+show semi trucks, classic Peterbilt 389 shape: very long squared hood, tall vertical chrome
+bar grille, big chrome front bumper, chrome sun visor over the windshield, TWO TALL CHROME
+EXHAUST STACKS rising vertically behind the cab, large square sleeper box behind the cab,
+chrome wheels. BOBTAIL — no trailer attached, just the tractor unit.
+Each cab has a CLEARLY DRAWN DRIVER DOOR on its side, with a window, a door handle, a grab
+rail, and two chrome climbing steps below it. The door is an obvious, visible feature.
+Both trucks are pearl-white with chrome, painted in watercolour with ink outlines. The
+BRIDE's truck has champagne-cream pinstriping; the GROOM's truck has silver pinstriping.
+These are big rigs, not buses and not vans.
 ```
 
 ---
@@ -89,32 +85,33 @@ specks of light. Smooth, slow, romantic motion. No text anywhere.
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. Locked-off camera, static, low at street level, tilted slightly
-up so the trucks look tall and imposing. Tall frame: the upper third is soft champagne sky
-with sage-green eucalyptus branches arching in from the top corners; the lower two thirds is
-an empty pale champagne-cream road.
+VERTICAL 9:16 PORTRAIT SHOT. THE CAMERA STANDS AT THE SIDE OF THE ROAD, NOT IN FRONT OF THE
+TRUCKS. We see the trucks FROM THE SIDE, in profile, so that the DRIVER DOOR OF EACH CAB
+FACES THE CAMERA and fills a good part of the frame. Never show the trucks head-on; the
+grilles point left and right, away from us. Upper third of the tall frame: warm champagne sky
+with painted flowers and sage-green branches hanging down from the top. Lower two thirds: a
+pale road.
 
-First half of the shot: the two white long-nose show semi trucks roll slowly into the frame
-from opposite sides — the champagne-pinstriped one from the left, the sage-pinstriped one
-from the right — and come to a gentle stop NOSE TO NOSE in the centre with a gap between
-them, front three-quarter view so the tall chrome grilles and the big chrome bumpers face
-each other. Only the front halves of the trucks fit inside the narrow vertical frame; the
-chrome exhaust stacks rise past the top of the cabs. Air brakes settle with a soft bounce,
-chrome glinting.
+0-4 s: the two white long-nose semi trucks drive in from opposite sides, seen in profile, and
+stop side by side in the centre of the frame with a gap between them — the champagne-striped
+truck on the left, the silver-striped truck on the right. Their cabs and the two driver doors
+are now clearly facing the camera. The trucks settle, chrome glinting.
 
-Second half of the shot: the high cab door of the left truck swings open and the BRIDE climbs
-down the chrome steps onto the road — she has LONG VIVID RED HAIR, bright red-copper, clearly
-visible, and wears an elegant ivory-white satin wedding gown with a sheer veil, holding her
-bouquet, lifting her skirt slightly as she steps down. At the same moment the cab door of the
-right truck opens and the GROOM climbs down — he is COMPLETELY BALD, with a FULL DARK BEARD,
-and wears an elegant black wedding tuxedo with a black bow tie, adjusting it as he lands.
-Both are seen full body, small against the big rigs, and turn to look toward the centre.
-Tiny motes of light drift down through the air.
+4-8 s: THE DOORS OPEN AND THE CHARACTERS CLIMB OUT THROUGH THEM. First the driver door of the
+left truck swings open outward toward the camera. Only then does the BRIDE appear, STANDING
+INSIDE THE OPEN DOORWAY on the top chrome step, holding the grab rail with one hand and her
+bouquet in the other. She climbs down the two chrome steps, one foot at a time, and her shoes
+touch the road. At the same time the driver door of the right truck swings open and the GROOM
+appears STANDING IN THAT DOORWAY, then climbs down his steps to the road. Both doors stay
+open behind them. They turn and look toward each other across the gap.
 
-IMPORTANT, do not deviate: the vehicles must be AMERICAN LONG-NOSE SEMI TRUCKS with tall
-chrome exhaust stacks and a long squared hood — never a bus or a van, and no trailer behind.
-The bride's hair must be RED. The groom must be BALD with a BEARD — no hair on his head at
-all. Both must wear elegant formal wedding attire.
+MECHANICS — follow exactly: the characters are NOT visible anywhere before their door opens.
+They must come out THROUGH THE OPEN DOOR OF THE CAB, standing on the steps, and climb down to
+the ground. They must NEVER appear on the hood, on the bumper, on the grille, on the fender,
+on the roof, through the windshield, or float in the air. The door opens FIRST, the person
+appears SECOND.
+
+The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD.
 ```
 
 ## CLIP 2 · Caminan, se encuentran y se besan (8 s)
@@ -124,24 +121,22 @@ all. Both must wear elegant formal wedding attire.
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. Tall frame, camera at chest height pushing in very slowly.
-Upper third: champagne sky and overhanging sage eucalyptus branches. Lower two thirds: the
-champagne-cream road, with the chrome grille and bumper of each parked white semi truck just
-visible at the left and right edges, soft and out of focus.
+VERTICAL 9:16 PORTRAIT SHOT. Same road, camera still at the side. The two white semi trucks
+stay parked in profile at the left and right edges of the tall frame, their driver doors
+still open, painted softly in the background. Upper third: champagne sky with painted flowers
+and sage branches hanging down.
 
-First part of the shot: the BRIDE walks slowly in from the left edge and the GROOM walks
-slowly in from the right edge, both toward the centre of the tall frame, seen full body, eyes
-locked on each other, smiling wider as they get closer. Her gown and veil sway with each step.
+0-5 s: the BRIDE walks slowly in from the left and the GROOM walks slowly in from the right,
+both toward the centre of the tall frame, seen full body, eyes locked on each other, smiling
+wider as they get closer. Her gown and veil sway with each step. The camera pushes in slowly.
 
-Final part of the shot: they stop face to face in the centre of the vertical frame, he gently
-cups her cheek, they lean in and share a tender romantic kiss. The camera has pushed in to a
-full-body-to-waist framing, the couple centred, the blurred chrome of the two trucks framing
-them left and right, foliage still arching overhead. Her veil lifts slightly in the breeze.
-Soft petals and light motes drift past. Tender and unhurried.
+5-8 s: they stop face to face in the centre, he gently cups her cheek, they lean in and share
+a tender romantic kiss. Framing is now full-body-to-waist, the couple centred, the painted
+trucks framing them left and right. Her veil lifts in the breeze. Hand-painted petals and
+sparkles drift past. Tender and unhurried.
 
-IMPORTANT, do not deviate: the vehicles at the edges are AMERICAN LONG-NOSE SEMI TRUCKS with
-chrome grilles — never buses or vans. The bride's hair must be RED. The groom must be BALD
-with a BEARD — no hair on his head at all. Keep both faces exactly as in the previous shot.
+Keep both faces exactly as in the previous shot. The bride's hair must be BRIGHT RED. The
+groom must be BALD with a FULL BEARD. Nobody climbs on the trucks.
 ```
 
 ## CLIP 3 · El destello que da paso a la invitación (8 s)
@@ -151,23 +146,19 @@ with a BEARD — no hair on his head at all. Keep both faces exactly as in the p
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. Tall frame, medium shot of the BRIDE and GROOM kissing, centred
-in the lower-middle of the frame, the chrome fronts of the two white semi trucks soft and
-blurred at the left and right edges, warm backlight rimming their silhouettes, open champagne
-space above their heads.
+VERTICAL 9:16 PORTRAIT SHOT. Medium shot of the BRIDE and GROOM kissing, centred in the
+lower-middle of the tall frame, the painted white semi trucks soft at the left and right
+edges, warm light behind the couple, painted flowers above their heads.
 
-First part of the shot: the kiss holds, and a cloud of delicate silver and champagne sparkles
-swirls upward through the tall frame, rising from the couple toward the top of the screen,
-catching on the blurred chrome.
+0-3 s: the kiss holds while a cloud of hand-painted silver and champagne sparkles swirls
+upward through the tall frame, rising from the couple toward the top of the screen.
 
-Final part of the shot: a soft elegant burst of warm white light blooms outward from between
-them, expanding up and down the vertical frame until it fills the whole screen and everything
-dissolves into a clean soft cream-white. The shot ends on a plain warm cream-white surface,
-completely empty and evenly lit, edge to edge. No text, no objects.
+3-8 s: a soft burst of warm white light blooms outward from between them and expands up and
+down the vertical frame until it fills the whole screen; everything dissolves into a clean
+soft cream-white. The shot ENDS ON A PLAIN WARM CREAM-WHITE SURFACE, completely empty and
+evenly lit, edge to edge. No text, no objects.
 
-IMPORTANT, do not deviate: the vehicles are AMERICAN LONG-NOSE SEMI TRUCKS — never buses.
-The bride's hair must be RED. The groom must be BALD with a BEARD. Keep both faces exactly
-as in the previous shot.
+Keep both faces exactly as in the previous shot.
 ```
 
 > El clip 3 termina en crema plano a propósito: así empalma sin corte con el fondo champán
@@ -183,10 +174,9 @@ as in the previous shot.
 | 2 | 0:01 → 0:06 | caminata + beso |
 | 3 | 0:02 → 0:07 | chispas + destello |
 
-≈ **15 s** en total. Si se quiere aún más corto, bajar cada uno a 4 s (≈12 s).
+≈ **15 s** en total.
 
 ## Cuando estén los clips
 
-Dejarlos en Descargas y avisarme. Los uno con ffmpeg en `escena.mp4` (720×1280, H.264),
-con cross-dissolve entre clips y fundido final a blanco, y reemplazo el actual — que todavía
-tiene los autobuses.
+Dejarlos en Descargas y avisarme. Los uno con ffmpeg en `escena.mp4` (720×1280, H.264), con
+cross-dissolve entre clips y fundido final a blanco, y reemplazo el actual.
