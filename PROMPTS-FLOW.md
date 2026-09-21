@@ -2,14 +2,15 @@
 
 **Dos clips, vertical 9:16, animación 2D dibujada a mano** (acuarela/gouache, tipo cuento
 ilustrado). Los camiones son **camiones americanos medianos** (cabina sencilla, sin dormitorio),
-blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se estacionan
-**de frente uno al otro**, con la cámara en tres cuartos para que se vean las puertas.
+blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Llegan **de los lados** (uno por la izquierda, otro por la derecha), se topan
+**de frente entre ellos**, y la cámara mira **desde el borde de la carretera** para que las
+puertas queden a la vista.
 
 ## Qué salió mal en el intento anterior y cómo se corrige
 
 | Problema | Causa | Corrección en el prompt |
 |---|---|---|
-| Los novios salían del cofre, del espejo y de la parrilla | Los camiones quedaron **de frente a la cámara**; las puertas van en el costado y nunca estuvieron en cuadro, así que Veo inventó por dónde salir | Cámara **en tres cuartos**, a un lado y un poco arriba: se ve el **frente a frente** de las parrillas Y la **puerta del conductor** de cada cabina |
+| Los novios salían del cofre, del espejo y de la parrilla | Los camiones quedaron **de frente a la cámara**; las puertas van en el costado y nunca estuvieron en cuadro, así que Veo inventó por dónde salir | Cámara **al borde de la carretera**: los camiones se ven **de perfil**, se topan de frente entre ellos, y la puerta del costado que da a cámara queda **a la vista** |
 | Los personajes se materializaban de la nada | El prompt nunca describió la mecánica | Se describe paso a paso: la puerta **se abre hacia la cámara** → aparecen **parados en el hueco de la puerta** → bajan **los escalones** → pisan el suelo |
 | Look de render 3D | El estilo pedía "3D animated" | Estilo nuevo: **animación 2D dibujada a mano** |
 
@@ -21,7 +22,7 @@ blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se esta
 | Resolución / duración | 720×1280, 24 fps, 8 s |
 | Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 |
 | Ingredientes | `novia.png`, `novio.png` y la foto del camión blanco (solo como referencia de look; el tamaño va **mediano**) |
-| Negative prompt | `giant truck, oversized truck, long sleeper cab, monster truck, 3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
+| Negative prompt | `trucks facing the viewer, trucks side by side, parallel trucks, giant truck, oversized truck, long sleeper cab, monster truck, 3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
 
 **Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los dos prompts.
 
@@ -73,7 +74,7 @@ DAY CAB, NO SLEEPER BOX behind the cab. Moderately short hood, not an extra-long
 They keep the classic American look: upright chrome bar grille, chrome front bumper, chrome
 sun visor over the windshield, and two modest chrome exhaust stacks behind the cab.
 No trailer attached.
-Each cab has a CLEARLY DRAWN DRIVER DOOR on its side, with a window, a door handle, a grab
+Each cab has a CLEARLY DRAWN DOOR on each side, with a window, a door handle, a grab
 rail, and two chrome climbing steps below it. The door is an obvious, visible feature.
 Both trucks are pearl-white with chrome, painted in watercolour with ink outlines. The
 BRIDE's truck has champagne-cream pinstriping; the GROOM's truck has silver pinstriping.
@@ -89,25 +90,28 @@ They are trucks, not buses and not vans — and medium-sized, never oversized.
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. THREE-QUARTER CAMERA ANGLE, placed off to one side of the road
-and slightly above it — NOT straight in front of the trucks. From this angle we can see BOTH
-the two grilles facing each other in the centre AND the near side of each cab, so that THE
-DRIVER DOOR OF EACH TRUCK IS CLEARLY VISIBLE toward the camera. Upper third of the tall
-frame: warm champagne sky with painted flowers and sage-green branches hanging down from the
-top. Lower two thirds: a pale road.
+ACTION FIRST: two medium white trucks drive toward each other along a road and stop grille to
+grille in the middle of the frame. One arrives FROM THE LEFT EDGE driving rightwards, the
+other arrives FROM THE RIGHT EDGE driving leftwards. THE TRUCKS FACE EACH OTHER — they do NOT
+face the camera. Their two grilles point at one another across a small gap in the centre.
 
-0-4 s: the two medium white trucks drive in slowly from opposite directions and stop FACING
-EACH OTHER, NOSE TO NOSE, in the centre of the frame with a gap between them — the
-champagne-striped truck coming from the left, the silver-striped truck from the right. Seen
-at three-quarters, so their grilles point at each other while their driver doors face us.
-They are medium trucks, modest in size, not towering. They settle, chrome glinting.
+CAMERA: we are standing AT THE EDGE OF THE ROAD, watching from the side, camera static. So we
+see both trucks IN PROFILE, side-on, travelling horizontally across the tall frame. Because we
+see them from the side, THE DOOR ON THE SIDE OF EACH CAB THAT FACES THE CAMERA IS FULLY
+VISIBLE, with its window, handle, grab rail and climbing steps. Upper third of the tall frame:
+warm champagne sky with painted flowers and sage-green branches hanging down from the top.
+Lower two thirds: the pale road.
 
-4-8 s: THE DOORS OPEN AND THE CHARACTERS CLIMB OUT THROUGH THEM. First the driver door of the
-left truck — clearly visible on the near side of the cab — swings open outward toward the
-camera. Only then does the BRIDE appear, STANDING
+0-4 s: the champagne-striped truck rolls in from the left and the silver-striped truck rolls
+in from the right, both seen in profile, and they come to a gentle stop nose to nose in the
+centre with a gap between them. They are medium trucks, modest in size, not towering. They
+settle, chrome glinting.
+
+4-8 s: THE DOORS OPEN AND THE CHARACTERS CLIMB OUT THROUGH THEM. First the cab door of the
+left truck — the one facing the camera — swings open outward toward us. Only then does the BRIDE appear, STANDING
 INSIDE THE OPEN DOORWAY on the top chrome step, holding the grab rail with one hand and her
 bouquet in the other. She climbs down the two chrome steps, one foot at a time, and her shoes
-touch the road. At the same time the driver door of the right truck swings open and the GROOM
+touch the road. At the same time the cab door of the right truck swings open toward the camera and the GROOM
 appears STANDING IN THAT DOORWAY, then climbs down his steps to the road. Both doors stay
 open behind them. They turn and look toward each other across the gap.
 
@@ -128,9 +132,10 @@ rigs. The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BE
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. Same road, same three-quarter angle. The two medium white trucks
-stay parked nose to nose at the left and right edges of the tall frame, their driver doors
-still open, painted softly in the background. Upper third: champagne sky with painted flowers
+VERTICAL 9:16 PORTRAIT SHOT. Same road, camera still at the edge of the road watching from
+the side. The two medium white trucks stay parked IN PROFILE, facing each other nose to nose,
+at the left and right edges of the tall frame, their cab doors still open, painted softly in
+the background. Upper third: champagne sky with painted flowers
 and sage branches hanging down.
 
 0-4 s: the BRIDE walks slowly in from the left and the GROOM walks slowly in from the right,
