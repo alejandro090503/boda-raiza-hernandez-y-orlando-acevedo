@@ -1,6 +1,6 @@
 # Prompts de Flow — escena de los camiones (Raiza & Orlando)
 
-**Tres clips, vertical 9:16, animación 2D dibujada a mano** (acuarela/gouache, tipo cuento
+**Dos clips, vertical 9:16, animación 2D dibujada a mano** (acuarela/gouache, tipo cuento
 ilustrado). Los camiones son **camiones americanos medianos** (cabina sencilla, sin dormitorio),
 blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se estacionan
 **de frente uno al otro**, con la cámara en tres cuartos para que se vean las puertas.
@@ -13,23 +13,23 @@ blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se esta
 | Los personajes se materializaban de la nada | El prompt nunca describió la mecánica | Se describe paso a paso: la puerta **se abre hacia la cámara** → aparecen **parados en el hueco de la puerta** → bajan **los escalones** → pisan el suelo |
 | Look de render 3D | El estilo pedía "3D animated" | Estilo nuevo: **animación 2D dibujada a mano** |
 
-## Ajustes en Flow (iguales para los 3 clips)
+## Ajustes en Flow (iguales para los 2 clips)
 
 | Ajuste | Valor |
 |---|---|
 | **Relación de aspecto** | **9:16 vertical** — seleccionarlo en Flow; el prompt solo no basta |
 | Resolución / duración | 720×1280, 24 fps, 8 s |
-| Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 y el 3 |
+| Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 |
 | Ingredientes | `novia.png`, `novio.png` y la foto del camión blanco (solo como referencia de look; el tamaño va **mediano**) |
 | Negative prompt | `giant truck, oversized truck, long sleeper cab, monster truck, 3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
 
-**Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres prompts.
+**Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los dos prompts.
 
-**Encadenado:** último frame del clip 1 como *first frame* del clip 2, y del 2 al 3.
+**Encadenado:** último frame del clip 1 como *first frame* del clip 2.
 
 ---
 
-## [ESTILO] — bloque fijo, va en los 3 prompts
+## [ESTILO] — bloque fijo, va en los 2 prompts
 
 ```
 FORMAT: vertical 9:16 portrait video, tall frame. Compose for a phone screen: the action sits
@@ -48,7 +48,7 @@ foliage. Plenty of hand-painted flowers framing the frame. Hand-painted sparkles
 slow, romantic motion. No text anywhere.
 ```
 
-## [PERSONAJES] — bloque fijo, va en los 3 prompts
+## [PERSONAJES] — bloque fijo, va en los 2 prompts
 
 ```
 CHARACTERS (keep identical in every shot) — 2D hand-drawn animated characters, elegant and
@@ -62,7 +62,7 @@ skin, kind eyes, friendly smile. Elegant cream-beige suit with a tie and a crisp
 The groom is slightly taller than the bride. Both are drawn, never photographic.
 ```
 
-## [CAMIONES] — bloque fijo, va en los 3 prompts
+## [CAMIONES] — bloque fijo, va en los 2 prompts
 
 ```
 TRUCKS (keep identical in every shot) — HAND-DRAWN 2D illustrations of MEDIUM-SIZE American
@@ -121,7 +121,7 @@ The trucks must be MEDIUM-SIZED, with a day cab and no sleeper box — never gia
 rigs. The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD.
 ```
 
-## CLIP 2 · Caminan, se encuentran y se besan (8 s)
+## CLIP 2 · Caminan, se encuentran, se besan y el destello (8 s)
 
 ```
 [ESTILO]
@@ -133,43 +133,25 @@ stay parked nose to nose at the left and right edges of the tall frame, their dr
 still open, painted softly in the background. Upper third: champagne sky with painted flowers
 and sage branches hanging down.
 
-0-5 s: the BRIDE walks slowly in from the left and the GROOM walks slowly in from the right,
+0-4 s: the BRIDE walks slowly in from the left and the GROOM walks slowly in from the right,
 both toward the centre of the tall frame, seen full body, eyes locked on each other, smiling
 wider as they get closer. Her gown and veil sway with each step. The camera pushes in slowly.
 
-5-8 s: they stop face to face in the centre, he gently cups her cheek, they lean in and share
+4-6 s: they stop face to face in the centre, he gently cups her cheek, they lean in and share
 a tender romantic kiss. Framing is now full-body-to-waist, the couple centred, the painted
-trucks framing them left and right. Her veil lifts in the breeze. Hand-painted petals and
-sparkles drift past. Tender and unhurried.
+trucks framing them left and right. Her veil lifts in the breeze.
 
-Keep both faces exactly as in the previous shot. The bride's hair must be BRIGHT RED. The
-groom must be BALD with a FULL BEARD. Nobody climbs on the trucks.
+6-8 s: the kiss holds while a cloud of hand-painted silver and champagne sparkles swirls
+upward around them, and a soft warm glow grows from between them, brightening the whole
+frame. Tender and unhurried.
+
+Keep both faces exactly as in the previous shot. The trucks stay MEDIUM-SIZED. The bride's
+hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD. Nobody climbs on the
+trucks.
 ```
 
-## CLIP 3 · El destello que da paso a la invitación (8 s)
-
-```
-[ESTILO]
-[CAMIONES]
-[PERSONAJES]
-
-VERTICAL 9:16 PORTRAIT SHOT. Medium shot of the BRIDE and GROOM kissing, centred in the
-lower-middle of the tall frame, the painted medium white trucks soft at the left and right
-edges, warm light behind the couple, painted flowers above their heads.
-
-0-3 s: the kiss holds while a cloud of hand-painted silver and champagne sparkles swirls
-upward through the tall frame, rising from the couple toward the top of the screen.
-
-3-8 s: a soft burst of warm white light blooms outward from between them and expands up and
-down the vertical frame until it fills the whole screen; everything dissolves into a clean
-soft cream-white. The shot ENDS ON A PLAIN WARM CREAM-WHITE SURFACE, completely empty and
-evenly lit, edge to edge. No text, no objects.
-
-Keep both faces exactly as in the previous shot.
-```
-
-> El clip 3 termina en crema plano a propósito: así empalma sin corte con el fondo champán
-> de la invitación.
+> El fundido final a blanco lo pongo yo con ffmpeg al unir los dos clips: sale mas limpio
+> que pedirselo a Veo, y empalma exacto con el fondo champán de la invitación.
 
 ---
 
@@ -177,11 +159,10 @@ Keep both faces exactly as in the previous shot.
 
 | Clip | Recorte | Se queda con |
 |---|---|---|
-| 1 | 0:00 → 0:05 | llegada + bajan |
-| 2 | 0:01 → 0:06 | caminata + beso |
-| 3 | 0:02 → 0:07 | chispas + destello |
+| 1 | 0:00 → 0:06 | llegada + bajan |
+| 2 | 0:00 → 0:08 | caminata + beso + resplandor |
 
-≈ **15 s** en total.
+≈ **14 s** en total, mas el fundido a blanco del final.
 
 ## Cuando estén los clips
 
