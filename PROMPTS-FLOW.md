@@ -31,16 +31,17 @@ lo mismo del 2 al 3. Sin eso saltan la luz y las posiciones.
 ## [PERSONAJES] — bloque fijo, va en los 3 prompts
 
 ```
-CHARACTERS (keep identical in every shot):
-BRIDE — elegant stylized 3D caricature of a real woman, refined and tasteful, not cartoonish:
-long vivid red-copper hair, fair skin, soft rosy cheeks, large expressive blue eyes, gentle
-smile. Fitted ivory-white satin wedding gown with off-shoulder neckline and a small train,
-sheer veil, pearl necklace, holding a compact bouquet of champagne-cream roses with sage
-green leaves.
-GROOM — elegant stylized 3D caricature of a real man, refined and tasteful: completely bald
-smooth head, full well-groomed dark brown beard and moustache, warm skin, kind blue eyes,
-slight smile. Black slim tuxedo, black bow tie, crisp white shirt, white pocket square.
-The groom is slightly taller than the bride.
+CHARACTERS (keep identical in every shot) — ANIMATED CARTOON CHARACTERS, like a 3D animated
+feature film. Charming and elegant, never photorealistic.
+BRIDE — stylized animated woman with soft rounded features: LONG VIVID RED-COPPER HAIR, fair
+skin, rosy cheeks, big expressive blue eyes, warm gentle smile. Fitted ivory-white satin
+wedding gown with off-shoulder neckline and a small train, sheer veil, pearl necklace,
+holding a compact bouquet of champagne-cream roses with sage green leaves.
+GROOM — stylized animated man with soft rounded features: COMPLETELY BALD smooth head, FULL
+well-groomed dark brown beard and moustache, warm skin, kind blue eyes, friendly smile.
+Black slim tuxedo, black bow tie, crisp white shirt, white pocket square.
+The groom is slightly taller than the bride. Both are clearly drawn/rendered characters with
+smooth matte shading — no skin pores, no photographic detail.
 ```
 
 ## [CAMIONES] — bloque fijo, va en los 3 prompts
