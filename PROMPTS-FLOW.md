@@ -1,8 +1,9 @@
 # Prompts de Flow — escena de los camiones (Raiza & Orlando)
 
 **Tres clips, vertical 9:16, animación 2D dibujada a mano** (acuarela/gouache, tipo cuento
-ilustrado). Los camiones son tractocamiones americanos de trompa larga tipo **Peterbilt 389**,
-blancos con cromo — pero **dibujados en 2D**, no renders 3D ni fotografía.
+ilustrado). Los camiones son **camiones americanos medianos** (cabina sencilla, sin dormitorio),
+blancos con cromo — **dibujados en 2D**, no renders 3D ni fotografía. Se estacionan
+**de frente uno al otro**, con la cámara en tres cuartos para que se vean las puertas.
 
 ## Qué salió mal en el intento anterior y cómo se corrige
 
@@ -20,7 +21,7 @@ blancos con cromo — pero **dibujados en 2D**, no renders 3D ni fotografía.
 | Resolución / duración | 720×1280, 24 fps, 8 s |
 | Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 y el 3 |
 | Ingredientes | `novia.png`, `novio.png` y la foto del Peterbilt blanco |
-| Negative prompt | `3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
+| Negative prompt | `giant truck, oversized truck, long sleeper cab, monster truck, 3d render, cgi, pixar style, photorealistic, photograph, live action, hyperrealistic, real people, skin pores, front view of truck, truck facing camera, character emerging from hood, character on the bumper, character on the grille, floating people, bus, minibus, van, trailer, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, extra limbs, extra fingers, blurry, shaky camera, crowd` |
 
 **Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres prompts.
 
@@ -64,11 +65,14 @@ The groom is slightly taller than the bride. Both are drawn, never photographic.
 ## [CAMIONES] — bloque fijo, va en los 3 prompts
 
 ```
-TRUCKS (keep identical in every shot) — HAND-DRAWN 2D illustrations of American long-nose
-show semi trucks, classic Peterbilt 389 shape: very long squared hood, tall vertical chrome
-bar grille, big chrome front bumper, chrome sun visor over the windshield, TWO TALL CHROME
-EXHAUST STACKS rising vertically behind the cab, large square sleeper box behind the cab,
-chrome wheels. BOBTAIL — no trailer attached, just the tractor unit.
+TRUCKS (keep identical in every shot) — HAND-DRAWN 2D illustrations of MEDIUM-SIZE American
+trucks. IMPORTANT: these are MEDIUM trucks, NOT giant long-haul rigs. Keep them modest and
+friendly in scale — roughly two and a half times the height of a person, small enough that a
+person standing next to the cab reaches above the wheel.
+DAY CAB, NO SLEEPER BOX behind the cab. Moderately short hood, not an extra-long nose.
+They keep the classic American look: upright chrome bar grille, chrome front bumper, chrome
+sun visor over the windshield, and two modest chrome exhaust stacks behind the cab.
+No trailer attached.
 Each cab has a CLEARLY DRAWN DRIVER DOOR on its side, with a window, a door handle, a grab
 rail, and two chrome climbing steps below it. The door is an obvious, visible feature.
 Both trucks are pearl-white with chrome, painted in watercolour with ink outlines. The
@@ -85,20 +89,22 @@ These are big rigs, not buses and not vans.
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. THE CAMERA STANDS AT THE SIDE OF THE ROAD, NOT IN FRONT OF THE
-TRUCKS. We see the trucks FROM THE SIDE, in profile, so that the DRIVER DOOR OF EACH CAB
-FACES THE CAMERA and fills a good part of the frame. Never show the trucks head-on; the
-grilles point left and right, away from us. Upper third of the tall frame: warm champagne sky
-with painted flowers and sage-green branches hanging down from the top. Lower two thirds: a
-pale road.
+VERTICAL 9:16 PORTRAIT SHOT. THREE-QUARTER CAMERA ANGLE, placed off to one side of the road
+and slightly above it — NOT straight in front of the trucks. From this angle we can see BOTH
+the two grilles facing each other in the centre AND the near side of each cab, so that THE
+DRIVER DOOR OF EACH TRUCK IS CLEARLY VISIBLE toward the camera. Upper third of the tall
+frame: warm champagne sky with painted flowers and sage-green branches hanging down from the
+top. Lower two thirds: a pale road.
 
-0-4 s: the two white long-nose semi trucks drive in from opposite sides, seen in profile, and
-stop side by side in the centre of the frame with a gap between them — the champagne-striped
-truck on the left, the silver-striped truck on the right. Their cabs and the two driver doors
-are now clearly facing the camera. The trucks settle, chrome glinting.
+0-4 s: the two medium white trucks drive in slowly from opposite directions and stop FACING
+EACH OTHER, NOSE TO NOSE, in the centre of the frame with a gap between them — the
+champagne-striped truck coming from the left, the silver-striped truck from the right. Seen
+at three-quarters, so their grilles point at each other while their driver doors face us.
+They are medium trucks, modest in size, not towering. They settle, chrome glinting.
 
 4-8 s: THE DOORS OPEN AND THE CHARACTERS CLIMB OUT THROUGH THEM. First the driver door of the
-left truck swings open outward toward the camera. Only then does the BRIDE appear, STANDING
+left truck — clearly visible on the near side of the cab — swings open outward toward the
+camera. Only then does the BRIDE appear, STANDING
 INSIDE THE OPEN DOORWAY on the top chrome step, holding the grab rail with one hand and her
 bouquet in the other. She climbs down the two chrome steps, one foot at a time, and her shoes
 touch the road. At the same time the driver door of the right truck swings open and the GROOM
@@ -111,7 +117,8 @@ the ground. They must NEVER appear on the hood, on the bumper, on the grille, on
 on the roof, through the windshield, or float in the air. The door opens FIRST, the person
 appears SECOND.
 
-The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD.
+The trucks must be MEDIUM-SIZED, with a day cab and no sleeper box — never giant long-haul
+rigs. The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD.
 ```
 
 ## CLIP 2 · Caminan, se encuentran y se besan (8 s)
@@ -121,8 +128,8 @@ The bride's hair must be BRIGHT RED. The groom must be BALD with a FULL BEARD.
 [CAMIONES]
 [PERSONAJES]
 
-VERTICAL 9:16 PORTRAIT SHOT. Same road, camera still at the side. The two white semi trucks
-stay parked in profile at the left and right edges of the tall frame, their driver doors
+VERTICAL 9:16 PORTRAIT SHOT. Same road, same three-quarter angle. The two medium white trucks
+stay parked nose to nose at the left and right edges of the tall frame, their driver doors
 still open, painted softly in the background. Upper third: champagne sky with painted flowers
 and sage branches hanging down.
 
@@ -147,7 +154,7 @@ groom must be BALD with a FULL BEARD. Nobody climbs on the trucks.
 [PERSONAJES]
 
 VERTICAL 9:16 PORTRAIT SHOT. Medium shot of the BRIDE and GROOM kissing, centred in the
-lower-middle of the tall frame, the painted white semi trucks soft at the left and right
+lower-middle of the tall frame, the painted medium white trucks soft at the left and right
 edges, warm light behind the couple, painted flowers above their heads.
 
 0-3 s: the kiss holds while a cloud of hand-painted silver and champagne sparkles swirls

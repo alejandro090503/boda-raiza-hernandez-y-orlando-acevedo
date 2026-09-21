@@ -839,6 +839,16 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 @keyframes envBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
 @media(prefers-reduced-motion:reduce){.env-body.landed,.env-tap-hint.show{animation:none!important}}
 
+
+/* ── Ajustes pedidos por la clienta (nota de voz 19 sep) ── */
+/* Los nombres iban en tinta verde y los queria plateados */
+.h-name.foil-silver{
+  text-shadow:none;
+  filter:drop-shadow(0 2px 3px rgba(247,231,206,.95)) drop-shadow(0 0 18px rgba(247,231,206,.85));
+}
+/* Mas presencia floral en los fondos de seccion */
+.sec-floral{opacity:.42;filter:brightness(1.02) saturate(.7);}
+
   </style>
 </head>
 <body>
@@ -970,7 +980,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <div class="h-name-wrap">
       <span class="h-name-wind-line"></span>
-      <div class="h-clip"><span class="h-name" id="hN1">Raiza</span></div>
+      <div class="h-clip"><span class="h-name foil-silver" id="hN1">Raiza</span></div>
       <span class="h-name-wind-line"></span>
     </div>
 
@@ -980,7 +990,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <div class="h-name-wrap">
       <span class="h-name-wind-line"></span>
-      <div class="h-clip"><span class="h-name" id="hN2">Orlando</span></div>
+      <div class="h-clip"><span class="h-name foil-silver" id="hN2">Orlando</span></div>
       <span class="h-name-wind-line"></span>
     </div>
 
@@ -1013,7 +1023,6 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
     Con mucha alegría queremos invitarte a compartir con nosotros
     la celebración de nuestra unión civil, rodeados de las personas que queremos.
   </p>
-  <span class="vers-ref">Raiza &amp; Orlando</span>
   <div class="gline" style="margin-top:22px"></div>
 </section>
 
@@ -1095,7 +1104,6 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <p class="loc-med-time" style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,10vw,44px);font-weight:500;color:var(--cream);text-align:center;margin:18px 0 4px;">7:00 <span style="font-size:clamp(12px,3vw,14px);letter-spacing:4px;color:var(--gold-deep);font-weight:700;">PM</span></p>
 
-    <p class="loc-addr">Domingo 11 de octubre de 2026</p>
     <p class="loc-addr loc-addr-street">649 Front St.<br>Celebration, FL 34747</p>
 
     <a href="https://www.google.com/maps/place/Columbia+Restaurant+-+Celebration/@28.3179541,-81.5392251,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd7f353792d363:0x789507b87fa885ee!8m2!3d28.3179541!4d-81.5392251!16s%2Fg%2F1tk_q296" target="_blank" rel="noopener"
@@ -1132,7 +1140,6 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <p class="loc-med-time" style="font-family:'Cormorant Garamond',serif;font-size:clamp(34px,10vw,44px);font-weight:500;color:var(--cream);text-align:center;margin:18px 0 4px;">7:30 <span style="font-size:clamp(12px,3vw,14px);letter-spacing:4px;color:var(--gold-deep);font-weight:700;">PM</span></p>
 
-    <p class="loc-addr">Domingo 11 de octubre de 2026</p>
     <p class="loc-addr loc-addr-street">649 Front St.<br>Celebration, FL 34747</p>
 
     <a href="https://www.google.com/maps/place/Columbia+Restaurant+-+Celebration/@28.3179541,-81.5392251,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd7f353792d363:0x789507b87fa885ee!8m2!3d28.3179541!4d-81.5392251!16s%2Fg%2F1tk_q296" target="_blank" rel="noopener"
@@ -1219,7 +1226,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
     <div class="dc-fig">
       <img src="./caballero.png" alt="Caballero, atuendo de cóctel elegante" loading="lazy">
       <span class="dc-fig-label">Caballeros</span>
-      <span class="dc-fig-sub">traje formal</span>
+      <span class="dc-fig-sub">traje y corbata</span>
     </div>
 
     <div class="dc-sep-line" aria-hidden="true"></div>
@@ -1227,7 +1234,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
     <div class="dc-fig">
       <img src="./dama.png" alt="Dama, atuendo de cóctel elegante" loading="lazy">
       <span class="dc-fig-label">Damas</span>
-      <span class="dc-fig-sub">vestido</span>
+      <span class="dc-fig-sub">vestido midi</span>
     </div>
   </div>
 
@@ -1238,70 +1245,17 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
       <span class="dc-dot" style="background:#faf7ee" aria-label="Marfil" title="Marfil"></span>
       <span class="dc-dot" style="background:#e6dcc8" aria-label="Beige claro" title="Beige claro"></span>
     </div>
-    <p class="dc-avoid-sub">Esos tonos están reservados para la novia.</p>
+    <p class="dc-avoid-sub">El blanco está reservado para la novia y el crema para el novio.</p>
   </div>
 </section>
 
 
-<!-- ════════════════ 8. FAMILIA ═════════════════════════ -->
-<section id="family">
-  <div class="sec-floral" style="background-image:url('./bg-sage-3.jpg')"></div>
-  <span class="lbl">Con amor de nuestras familias</span>
-  <h2 class="ttl">Papás de los Novios</h2>
-  <div class="gline"></div>
-
-  <p class="fam-ttl">Padres del Novio</p>
-  <div class="fam-card">
-    <p class="fam-nms">Por confirmar</p>
-  </div>
-
-  <div class="sdiv"></div>
-
-  <p class="fam-ttl">Padres de la Novia</p>
-  <div class="fam-card">
-    <p class="fam-nms">Por confirmar</p>
-  </div>
-
-  <div class="sdiv"></div>
-
-  <p class="fam-ttl">Padrinos</p>
-  <div class="fam-card">
-    <p class="fam-nms">Por confirmar</p>
-  </div>
-</section>
 
 
-<!-- ════════════════ 9. GALERÍA ═════════════════════════ -->
-<section id="gallery">
-  <div class="sec-floral" style="background-image:url('./bg-sage-4.jpg')"></div>
-  <div class="gallery-head">
-    <span class="lbl">Nuestra historia</span>
-    <h2 class="ttl">Galería</h2>
-    <div class="gline"></div>
-    <div class="gallery-sub">Raiza &amp; Orlando</div>
-  </div>
 
-  <div class="wheel-scene" id="wheel-scene">
-    <div class="wheel-ring" id="wheel-ring">
-      <div class="wheel-card"><img src="./gal-1.jpg" alt="Raiza y Orlando" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-2.jpg" alt="Raiza y Orlando" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-3.jpg" alt="Raiza" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-4.jpg" alt="Orlando" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-1.jpg" alt="" aria-hidden="true" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-2.jpg" alt="" aria-hidden="true" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-3.jpg" alt="" aria-hidden="true" loading="eager"></div>
-      <div class="wheel-card"><img src="./gal-4.jpg" alt="" aria-hidden="true" loading="eager"></div>
-    </div>
-    </div>
-  </div>
-  <p class="gal-hint">Arrastra para girar</p>
-</section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" aria-hidden="true">
-  <img id="lightbox-img" src="" alt="">
-  <button id="lightbox-close" aria-label="Cerrar">&#x2715;</button>
-</div>
+
+
 
 
 <!-- ════════════════ QR ÁLBUM ═══════════════════════════ -->
@@ -2444,7 +2398,6 @@ function scrollAnims() {
 
   /* ── versículo ─────────────────────────────────────── */
   gsap.from('.vers-text', { opacity:0, y:30, duration:1.2, ease:e1, scrollTrigger:{ trigger:'#versiculo', start:'top 82%', once:true } });
-  gsap.from('.vers-ref',  { opacity:0, y:16, duration:.8, delay:.3, ease:e1, scrollTrigger:{ trigger:'#versiculo', start:'top 82%', once:true } });
   gsap.from('#versiculo .ornament-h', { opacity:0, scaleX:0, duration:1, ease:e1, scrollTrigger:{ trigger:'#versiculo', start:'top 88%', once:true } });
 
   /* ── countdown ─────────────────────────────────────── */
@@ -2494,11 +2447,6 @@ function scrollAnims() {
     gsap.from(c, { opacity:0, x: i%2===0 ? -40 : 40, rotateY: i%2===0 ? -5 : 5, duration:1, ease:e1, scrollTrigger:{ trigger:c, start:'top 88%', once:true } });
   });
 
-  /* ── gallery ───────────────────────────────────────── */
-  gsap.from('.gallery-sub', { opacity:0, y:18, duration:.9, ease:e1, scrollTrigger:{ trigger:'#gallery', start:'top 82%', once:true } });
-  gsap.fromTo('#wheel-scene', { opacity:0, y:30 }, { opacity:1, y:0, duration:1, ease:e1,
-    immediateRender:false, scrollTrigger:{ trigger:'#wheel-scene', start:'top 88%', once:true } });
-  gsap.from('.gal-hint', { opacity:0, y:12, duration:.7, ease:e1, scrollTrigger:{ trigger:'.gal-hint', start:'top 94%', once:true } });
 
   /* ── QR album ──────────────────────────────────────── */
   gsap.from('.qr-img', { opacity:0, scale:.7, rotation:-8, duration:1.2, ease:e3, scrollTrigger:{ trigger:'#qr-album', start:'top 82%', once:true } });
