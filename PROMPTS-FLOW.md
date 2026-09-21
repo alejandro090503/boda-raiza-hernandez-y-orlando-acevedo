@@ -24,11 +24,14 @@ Vertical 9:16. Charming 3D animated film style, like a modern animated feature �
 rendered, never photorealistic. Warm golden light, champagne-cream and soft silver palette,
 sage foliage and flowers hanging from the top of the frame.
 
-Camera static AT THE EDGE OF THE ROAD, so both trucks are seen IN PROFILE, side-on.
+Camera static AT THE EDGE OF THE ROAD, level with the trucks, so we see them from the side.
 
-Two MEDIUM white trucks with chrome grilles and short day cabs (no sleeper box, no trailer)
-drive toward each other — one in from the left edge, one in from the right edge — and stop
-grille to grille in the centre with a small gap. They face EACH OTHER, not the camera.
+Two MEDIUM white trucks with chrome grilles and short day cabs (no sleeper box, no trailer).
+The LEFT truck enters from the left edge with its FRONT BUMPER POINTING RIGHT. The RIGHT
+truck enters from the right edge with its FRONT BUMPER POINTING LEFT. They drive straight at
+each other and brake, until THE TWO FRONT BUMPERS ALMOST TOUCH IN THE EXACT CENTRE OF THE
+FRAME, headlights aimed at each other, one metre apart. They are head to head, not parallel,
+not side by side.
 
 Then the cab door facing the camera on each truck swings open. Only after the door is open
 does a character appear, standing in the open doorway on the step, and climbs down to the
