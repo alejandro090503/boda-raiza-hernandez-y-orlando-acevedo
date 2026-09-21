@@ -17,7 +17,7 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 | `sobre.jpg` / `sobre.mp4` | Sobre del cliente: champán con sello de cera sage "R&O" (8 s) |
 | `escena.mp4` | Escena del cliente en video (16 s): llegan los camiones, bajan los novios, se encuentran y se besan; termina en blanco |
 | `novia.png` / `novio.png` | Personajes ilustrados de la escena de los camiones |
-| `camion-novia.png` / `camion-novio.png` | Los dos camiones (champán y sage) |
+| `camion-novia.png` / `camion-novio.png` | Los dos camiones del respaldo GSAP: Peterbilt 389 bobtail repintado champán y sage (el modelo que pidió el cliente) |
 | `hero-bg.jpg`, `bg-sage-1..4.jpg` | Fondos botánicos: eucalipto acuarela sobre champán, siempre por reducción desde la fuente (nunca ampliados, o se ven borrosos) |
 | `venue-1.jpg` / `venue-2.jpg` | Restaurante Columbia (exterior / interior) |
 | `gal-1..4.jpg` | Galería ilustrada (carrusel 3D) |
