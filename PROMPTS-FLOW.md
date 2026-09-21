@@ -1,8 +1,9 @@
 # Prompts de Flow — escena de los camiones (Raiza & Orlando)
 
-Basado en el clip que sí funcionó (`Bride_and_groom_exiting_trucks_...145957.mp4`): los
-camiones vienen **de frente hacia la cámara** por la carretera, uno por carril, y las puertas
-se abren **hacia nosotros**. Eso es lo que hace que la bajada se vea natural.
+**Puesta en escena correcta** (la del clip de referencia): los camiones se ven **de perfil**,
+entran uno por la izquierda y otro por la derecha, y se detienen **nariz con nariz** dejando un
+hueco al centro. La puerta que se abre es la del **lado de la cámara**; los novios bajan hacia
+adelante y quedan parados delante de su propio camión.
 
 **Ajustes en Flow:** 9:16 vertical (seleccionarlo, el prompt solo no basta) · 8 s ·
 *Ingredients to Video* con `novia.png` y `novio.png`. El clip 2 sale del último frame
@@ -11,10 +12,10 @@ se abren **hacia nosotros**. Eso es lo que hace que la bajada se vea natural.
 **Negative prompt:**
 
 ```
-trucks in profile, side view of truck, trucks facing each other, giant truck, long sleeper
-cab, trailer, bus, van, character on the hood, character on the bumper, floating people,
-photorealistic, live action, real people, horizontal composition, black bars, text,
-watermark, extra fingers, blurry, shaky camera
+truck facing the camera, front view of truck, trucks driving toward the viewer, road vanishing
+point, dashed lane lines, giant truck, sleeper cab, trailer, character on the hood, character
+on the grille, floating people, photorealistic, live action, real people, horizontal
+composition, black bars, text, watermark, extra fingers, blurry, shaky camera
 ```
 
 ---
@@ -22,55 +23,51 @@ watermark, extra fingers, blurry, shaky camera
 ## CLIP 1 — un solo prompt
 
 ```
-Vertical 9:16. Warm watercolour storybook illustration, hand-painted and charming, never
-photorealistic. Cream and gold background, white blossoms and green leaves hanging from the
-top of the frame, golden sparkles floating in the air.
+Vertical 9:16. Warm watercolour storybook illustration, hand-painted, soft and elegant, never
+photorealistic. Plain cream and beige background, no sky and no buildings. Eucalyptus branches
+with green leaves hang from the top of the frame. Soft golden light.
 
-CAMERA: low, at road level, looking STRAIGHT DOWN THE ROAD toward the horizon. The road
-recedes to a vanishing point with dashed yellow centre lines.
+SIDE VIEW, camera at eye level, static. Two MEDIUM vintage trucks seen fully in PROFILE —
+rounded cream and sage-green bodies, chrome trim, round headlights, short cab, no trailer.
 
-Two MEDIUM vintage cream-and-white trucks — round headlights, chrome grille, short day cab,
-two chrome exhaust stacks, no trailer — drive TOWARD THE CAMERA from the far distance, one in
-each lane, SIDE BY SIDE, their fronts facing us. They roll closer and stop near the camera,
-filling the lower half of the tall frame.
+One truck drives IN FROM THE LEFT edge facing RIGHT. The other drives IN FROM THE RIGHT edge
+facing LEFT. They roll toward each other and STOP NOSE TO NOSE, their front grilles almost
+touching at the centre of the frame, leaving a small gap between them.
 
-Then BOTH CAB DOORS SWING OPEN OUTWARD TOWARD THE CAMERA. Only after the doors are open do
-the characters appear, each standing in their open doorway on the step: in the LEFT truck a
-BRIDE with long bright red hair, ivory satin gown and veil, holding a bouquet; in the RIGHT
-truck a GROOM, completely bald with a full dark beard, in a cream suit and tie. Each steps
-down onto the road, doors still open on either side of them, and they turn to look at each
-other.
+Then the CAB DOOR OF EACH TRUCK — the door on the side facing the camera — SWINGS OPEN toward
+us. Only after the doors are open do the characters appear: from the LEFT truck a BRIDE with
+long bright red wavy hair, ivory satin gown and veil, holding a white bouquet; from the RIGHT
+truck a GROOM, completely bald with a full dark beard, in a black tuxedo with bow tie. Each
+steps down and stands on the ground in front of their own truck, then turns to look at the
+other across the gap.
 
-The doors open FIRST, the people appear SECOND. Nobody ever appears on the hood, bumper,
-grille or roof.
+The doors open FIRST, the people appear SECOND. Nobody appears on the hood, grille or roof.
+The trucks stay in profile the whole time.
 ```
 
 ## CLIP 2 — desde el último frame del clip 1
 
 ```
-Same scene, same characters, same two cream trucks with their doors open.
+Same scene, same characters, same two cream trucks stopped nose to nose with their doors open.
 
-The BRIDE and the GROOM walk toward each other into the gap between the two open doors, eyes
-on each other, smiling. They meet face to face, he cups her cheek and they share a tender
-romantic kiss. Golden sparkles rise around them and a soft warm glow grows between them,
-brightening the frame.
+The BRIDE and the GROOM walk toward each other into the gap between the two trucks, smiling,
+eyes locked. They meet at the centre, he cups her cheek and they share a tender romantic kiss.
+Golden sparkles rise around them and a soft warm glow grows, brightening the frame.
 
-Keep both faces identical. Bride: bright red hair. Groom: bald with a full beard. Nobody
-climbs on the trucks.
+Keep both faces identical. Bride: bright red hair. Groom: bald with a full beard. The trucks
+stay in profile and nobody climbs on them.
 ```
 
 ---
 
 ## Notas
 
-- **Por qué de frente a cámara y no de perfil:** era mi error. De perfil los camiones se
-  topan entre ellos pero la bajada queda de lado y la IA la resuelve mal. De frente, con las
-  puertas abriéndose hacia el espectador, la salida se lee perfecto — es justo lo que pasa en
-  el clip que ya salió bien.
-- **Por qué "las puertas se abren primero":** sin esa frase los personajes se materializan.
-- El **estilo del prompt es acuarela**, copiado del clip que funcionó. Si lo quieres en 3D,
-  cambia sólo la primera línea por: `Vertical 9:16. Charming 3D animated film style, like a
-  modern animated feature — stylized and rendered, never photorealistic.`
+- **"De frente" = entre ellos, no hacia la cámara.** Los camiones se topan nariz con nariz,
+  vistos de perfil. La versión "hacia la cámara por la carretera" fue un error de lectura mío.
+- **Por qué "las puertas se abren primero":** sin esa frase los personajes se materializan
+  atravesando la carrocería o aparecen encima del cofre.
+- **Por qué "no sky, no buildings":** el clip que funcionó tiene fondo crema plano; en cuanto
+  la IA mete carretera y horizonte, gira los camiones hacia el frente.
 - El **fundido final a blanco** lo pongo con ffmpeg al unir los clips; empalma exacto con el
   fondo champán de la invitación.
 
