@@ -1,8 +1,8 @@
 # Prompts de Flow — escena de los camiones (Raiza & Orlando)
 
-**Tres clips, formato vertical 9:16.** Los camiones son **tractocamiones americanos de
-trompa larga tipo Peterbilt 389, blancos con cromo** (la referencia que mandó el cliente),
-no autobuses.
+**Tres clips, formato vertical 9:16.** Todo es **animación 3D tipo película animada**, no
+imagen real. Los camiones son **tractocamiones americanos de trompa larga tipo Peterbilt 389,
+blancos con cromo** (la referencia que mandó el cliente) pero **dibujados**, no fotográficos.
 
 | Clip | Qué pasa | Tiempos dentro del clip |
 |---|---|---|
@@ -18,7 +18,7 @@ no autobuses.
 | Resolución / duración | 720×1280, 24 fps, 8 s (igual que `sobre.mp4`) |
 | Modo | **Ingredients to Video** en el clip 1; **Frames to Video** en el 2 y el 3 |
 | Ingredientes | Subir `novia.png`, `novio.png` y **la foto del Peterbilt blanco** como referencia |
-| Negative prompt | `bus, minibus, van, vintage bus, coach, trailer, semi trailer, cargo box, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, distorted faces, extra limbs, extra fingers, blurry, low quality, shaky camera, modern city, traffic, crowd` |
+| Negative prompt | `photorealistic, photograph, live action footage, hyperrealistic, real people, documentary, cctv, skin pores, bus, minibus, van, vintage bus, coach, trailer, semi trailer, cargo box, horizontal composition, landscape framing, letterbox, black bars, text, letters, watermark, logo, subtitles, distorted faces, extra limbs, extra fingers, blurry, low quality, shaky camera, modern city, traffic, crowd` |
 
 **Consistencia:** pegar `[PERSONAJES]`, `[CAMIONES]` y `[ESTILO]` **literal** en los tres
 prompts. Si los parafraseas, Veo devuelve otra cara y otro camión.
@@ -46,13 +46,15 @@ The groom is slightly taller than the bride.
 ## [CAMIONES] — bloque fijo, va en los 3 prompts
 
 ```
-TRUCKS (keep identical in every shot):
-Two AMERICAN LONG-NOSE SHOW SEMI TRUCKS, classic Peterbilt 389 style: very long squared
+TRUCKS (keep identical in every shot) — STYLIZED ANIMATED VERSIONS, not photoreal models:
+Two AMERICAN LONG-NOSE SHOW SEMI TRUCKS drawn in the same cartoon 3D style as the characters,
+with softly rounded edges and chunky friendly proportions. Classic Peterbilt 389 shape: very long squared
 hood, tall vertical chrome bar grille, massive polished chrome front bumper, chrome sun
 visor over the windshield, TWO TALL POLISHED CHROME EXHAUST STACKS rising vertically behind
 the cab, large square sleeper box behind the cab, polished aluminium wheels with chrome hubs.
 BOBTAIL — no trailer attached, just the tractor unit.
-Both trucks are glossy pearl-white, immaculate, waxed show-truck clean, with abundant chrome.
+Both trucks are glossy pearl-white, immaculate, with abundant bright stylized chrome —
+rendered like a cartoon, clean and simplified, never like a photograph of a real truck.
 The BRIDE's truck carries delicate champagne-cream pinstriping; the GROOM's truck carries
 delicate sage-green pinstriping. Nothing else differs between them.
 These are big rigs, not buses and not vans.
@@ -65,10 +67,16 @@ FORMAT: vertical 9:16 portrait video, tall frame. Compose for a phone screen: th
 in the lower-middle third, with open sky and overhanging foliage filling the upper third.
 Never compose this as a wide horizontal shot.
 
-STYLE: elegant wedding-invitation animation, soft cinematic lighting, warm golden hour glow.
+STYLE — THIS IS A 3D ANIMATED CARTOON, NOT LIVE ACTION AND NOT PHOTOREALISTIC.
+Look and feel of a modern animated feature film (Pixar / Disney style): stylized characters
+and vehicles with soft rounded forms, clean simplified surfaces, slightly exaggerated
+proportions, big expressive eyes, smooth matte shading, no skin pores, no photographic
+texture, no real people. Everything is rendered, illustrated, charming and warm.
+
+Elegant wedding-invitation animation, soft cinematic lighting, warm golden hour glow.
 Colour palette strictly champagne cream (#F7E7CE), sage green (#a8b8a9) and soft silver
-(#C0C0C0), with bright polished chrome on the trucks. Dreamy shallow depth of field, gentle
-film grain, floating specks of light. Smooth, slow, romantic motion. No text anywhere.
+(#C0C0C0), with bright stylized chrome on the trucks. Dreamy shallow depth of field, floating
+specks of light. Smooth, slow, romantic motion. No text anywhere.
 ```
 
 ---
