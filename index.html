@@ -863,7 +863,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   text-transform:none!important;
 }
 /* la caligrafia necesita mas cuerpo que la serif para leerse igual */
-.h-name{font-size:clamp(62px,19vw,88px)!important;line-height:.94!important}
+.h-name{font-size:clamp(62px,19vw,88px)!important;line-height:1.12!important}
 .h-amp{font-size:clamp(30px,9vw,42px)!important}
 .ttl{font-size:clamp(42px,12.5vw,56px)!important;line-height:1.08!important}
 .vers-text{font-size:20px!important;line-height:1.62!important;font-style:normal!important}
@@ -901,7 +901,13 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
    El padding en .h-name ademas extiende el degradado del foil, que con
    background-clip:text solo pinta dentro de la caja del span.          */
 .h-clip,.h-amp-clip{padding-left:.26em;padding-right:.26em;margin-left:-.26em;margin-right:-.26em;}
-.h-name,.h-amp{padding-left:.14em;padding-right:.14em;}
+/* Tambien por ARRIBA: los remates altos de la R y la O rebasan la linea.
+   Solo se abre el borde superior — el inferior es el que hace el efecto
+   de que el nombre sube al entrar, y ese se deja intacto. */
+.h-clip,.h-amp-clip{padding-top:.34em;margin-top:-.34em;}
+/* line-height .94 recortaba la caja del span, y background-clip:text solo
+   pinta dentro de ella: el remate quedaba sin degradado, o sea invisible */
+.h-name,.h-amp{padding-left:.14em;padding-right:.14em;padding-top:.2em;margin-top:-.2em;}
 /* los mismos remates se cortan en los titulos de seccion y en el RSVP */
 .ttl,.rsvp-title,.dc-main-style,.itv3-time,.cal-sub{padding-left:.1em;padding-right:.1em;overflow:visible;}
 </style>
