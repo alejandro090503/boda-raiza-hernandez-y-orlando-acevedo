@@ -891,6 +891,19 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 .cd-col-lbl,.env-tap-hint,.rsvp-deadline,.vinyl-label-text{font-size:16px!important;line-height:1.5!important}
 .dc-fig-sub{font-size:16px!important;line-height:1.5!important}
 .h-scroll span,.el-credit span{font-size:16px!important}
+
+/* ── SWASHES DE SYMPHONY ──────────────────────────────────────────────
+   Symphony pinta rabos y colas FUERA de la metrica del glifo. Los
+   .h-clip ajustan al ancho del texto y con overflow:hidden (que existe
+   para la animacion vertical de entrada) rebanaban la "a" de Raiza y la
+   "o" de Orlando. Se ensancha solo la caja de pintura: padding lateral
+   + margen negativo igual, asi el texto no se mueve ni pierde el centro.
+   El padding en .h-name ademas extiende el degradado del foil, que con
+   background-clip:text solo pinta dentro de la caja del span.          */
+.h-clip,.h-amp-clip{padding-left:.26em;padding-right:.26em;margin-left:-.26em;margin-right:-.26em;}
+.h-name,.h-amp{padding-left:.14em;padding-right:.14em;}
+/* los mismos remates se cortan en los titulos de seccion y en el RSVP */
+.ttl,.rsvp-title,.dc-main-style,.itv3-time,.cal-sub{padding-left:.1em;padding-right:.1em;overflow:visible;}
 </style>
 </head>
 <body>
