@@ -53,9 +53,11 @@ Basados en `boda-victoria-y-eduardo`, que es la referencia de "elegante" que pid
 
 - **Cinzel** (Google Fonts) para la estructura — rótulos, datos, cuerpo. Grabada y en
   versalitas; reemplazó a Cormorant Garamond.
-- **Symphony Pro** (`symphony.woff`) para los acentos caligráficos: nombres del hero,
-  títulos de sección, horas del itinerario y el título del RSVP. El versículo **no** va en
-  caligrafía: tres renglones de trazo fino no se leen.
+- **Symphony Pro** (`symphony.woff`) **solo en los rótulos decorativos grandes**: nombres
+  del hero, títulos de sección, título del RSVP, dress code y el pie. Ningún dato que el
+  invitado tenga que leer va en caligrafía — la novia pidió expresamente corregirlo
+  ("ni yo las leo... va a haber mucha gente más adulta"). Por eso la fecha del Save the Date,
+  las horas del itinerario, el "pm" y la frase de la lluvia de sobres están en Cinzel.
 - Cinzel no tiene cursiva real, así que se retiró `font-style:italic` de todo lo que quedó
   en Cinzel — la cursiva sintética sale torcida.
 - **Adornos nupciales**: cuatro separadores SVG (corazón con vid, tulipán, hojas, rizos),
@@ -71,6 +73,12 @@ Basados en `boda-victoria-y-eduardo`, que es la referencia de "elegante" que pid
 La galería se eliminó a pedido de la novia: no tienen sesión de fotos todavía y la quiere para
 la boda religiosa del año que viene. La card de "Cena" que estaba en regalos se eliminó; el dato de las bebidas pasó al
 itinerario, bajo la Cena de las 7:30.
+
+## Ubicación
+
+Además del botón "Cómo llegar" con pin, la tarjeta de la ceremonia lleva el **mapa embebido**
+a la vista (`maps.google.com/maps?q=...&output=embed`, sin API key, `loading="lazy"`): la novia
+no encontraba el enlace.
 
 ## RSVP
 

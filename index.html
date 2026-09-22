@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#F7E7CE">
   <title>Raiza &amp; Orlando · 11 · Octubre · 2026</title>
-  <meta name="description" content="Con mucha alegría queremos invitarte a compartir con nosotros la celebración de nuestra unión civil. Celebration, Florida · 11 de Octubre de 2026.">
+  <meta name="description" content="Con mucha alegría queremos invitarte a compartir con nosotros la celebración de nuestra boda civil. Celebration, Florida · 11 de Octubre de 2026.">
   <meta property="og:title" content="Raiza & Orlando · 11 · Octubre · 2026">
-  <meta property="og:description" content="Te invitamos a celebrar con nosotros nuestra unión civil. Celebration, Florida.">
+  <meta property="og:description" content="Te invitamos a celebrar con nosotros nuestra boda civil. Celebration, Florida.">
   <meta property="og:image" content="https://boda-raiza-hernandez-y-orlando-acevedo.vercel.app/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -849,14 +849,14 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   filter:drop-shadow(0 2px 3px rgba(247,231,206,.95)) drop-shadow(0 0 18px rgba(247,231,206,.85));
 }
 /* Mas presencia floral en los fondos de seccion */
-.sec-floral{opacity:.42;filter:brightness(1.02) saturate(.7);}
+.sec-floral{opacity:.34;filter:brightness(1.12) saturate(.62);}
 
   
 /* ── TIPOGRAFIA ELEGANTE (ref. boda-victoria-y-eduardo) ──────────────
    Cinzel para la estructura — grabada, mayusculas, muy nupcial.
    Symphony Pro para los acentos caligraficos. Cinzel NO tiene cursiva
    real: la sintetica sale torcida, asi que se retira donde quedo.    */
-.h-name,.h-amp,.ttl,.itv3-time,.rsvp-title,.dc-main-style,.cal-sub{
+.h-name,.h-amp,.ttl,.rsvp-title,.dc-main-style{
   font-family:var(--script)!important;
   font-style:normal!important;
   letter-spacing:.01em!important;
@@ -909,7 +909,36 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
    pinta dentro de ella: el remate quedaba sin degradado, o sea invisible */
 .h-name,.h-amp{padding-left:.14em;padding-right:.14em;padding-top:.2em;margin-top:-.2em;}
 /* los mismos remates se cortan en los titulos de seccion y en el RSVP */
-.ttl,.rsvp-title,.dc-main-style,.itv3-time,.cal-sub{padding-left:.1em;padding-right:.1em;overflow:visible;}
+.ttl,.rsvp-title,.dc-main-style{padding-left:.1em;padding-right:.1em;overflow:visible;}
+
+/* ── MAPA EMBEBIDO ────────────────────────────────────────────────────
+   La novia no encontraba el enlace de Maps, asi que ademas del boton va
+   el mapa a la vista en la tarjeta de la ceremonia.                    */
+.loc-mapa{position:relative;width:100%;max-width:320px;height:190px;margin:14px auto 16px;
+  border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(60,70,58,.16);
+  border:1px solid rgba(140,148,153,.35);background:#EFE6D6;}
+.loc-mapa iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.82);}
+
+/* ── LEGIBILIDAD DE LA CURSIVA ────────────────────────────────────────
+   La novia: "ni yo las leo... va a haber mucha gente mas adulta, si yo no
+   las puedo ver, no la van a ver los demas". Symphony se queda solo en
+   los rotulos decorativos grandes; todo dato que haya que LEER —fecha,
+   horas, el pm, la frase de la lluvia de sobres— vuelve a Cinzel.      */
+.cal-sub,.cal-sub strong,.itv3-time,.itv3-mer,.env-title{
+  font-family:'Cinzel',serif!important;
+  font-style:normal!important;
+  letter-spacing:.02em!important;
+}
+.cal-sub{font-size:19px!important;line-height:1.55!important;font-weight:600!important}
+.itv3-time{font-size:27px!important;font-weight:600!important;letter-spacing:.04em!important}
+.itv3-mer{font-size:16px!important;letter-spacing:.14em!important}
+.env-title{font-size:23px!important;line-height:1.4!important;font-weight:600!important}
+/* y lo que sigue en caligrafia se despega un poco */
+.h-name,.h-amp,.ttl,.rsvp-title,.dc-main-style,.ft-nms{letter-spacing:.035em!important}
+
+/* el boton necesita ancho: Cinzel en versalitas ocupa mas que Cormorant */
+.btn{letter-spacing:1.8px!important;padding-left:12px!important;padding-right:12px!important}
+.loc-card .btn-gold{max-width:300px!important}
 </style>
 </head>
 <body>
@@ -921,7 +950,6 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   <div class="ld-bg" aria-hidden="true"></div>
   <div class="ld-overlay" aria-hidden="true"></div>
   <div class="ld-content">
-    <div class="ld-names">R &amp; O</div>
     <p class="ld-date">11 · Octubre · 2026</p>
     <button class="ld-btn" onclick="openEnvelope()">Toca para abrir</button>
   </div>
@@ -1037,7 +1065,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   <div class="h-particles" id="hPart" aria-hidden="true"></div>
 
   <div class="h-cnt" id="hCnt">
-    <p class="h-we">Celebración de nuestra unión civil</p>
+    <p class="h-we">Celebración de nuestra boda civil</p>
 
     <div class="h-name-wrap">
       <span class="h-name-wind-line"></span>
@@ -1083,7 +1111,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   <div class="adorno-nupcial" aria-hidden="true"><svg class="an-svg" viewBox="0 0 320 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M160 31 C150 24 145 18 149 13 C152 9.5 157 10.5 160 15 C163 10.5 168 9.5 171 13 C175 18 170 24 160 31Z"/><g id="an0-vid"><path d="M175 21 C188 12 198 30 212 21 C219 16 214 10 209 14 C205 18 212 24 220 21 C234 15 246 29 260 21 C267 17 262 11 257 15 C253 19 260 25 268 22 C280 18 290 22 300 20"/><path d="M228 19 Q234.4 16.3 233.5 9.5 Q227.1 12.1 228 19Z"/><path d="M240 23 Q239.1 29.9 245.5 32.5 Q246.4 25.7 240 23Z"/><path d="M278 19 Q284.6 16.9 284.3 10 Q277.7 12.1 278 19Z"/><path d="M292 21 Q292.7 27.1 298.9 26.8 Q298.1 20.7 292 21Z"/></g><g transform="translate(320,0) scale(-1,1)"><use href="#an0-vid"/></g></svg></div>
   <p class="vers-text">
     Con mucha alegría queremos invitarte a compartir con nosotros
-    la celebración de nuestra unión civil, rodeados de las personas que queremos.
+    la celebración de nuestra boda civil, rodeados de las personas que queremos.
   </p>
   <div class="gline" style="margin-top:22px"></div>
 </section>
@@ -1169,10 +1197,18 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <p class="loc-addr loc-addr-street">649 Front St.<br>Celebration, FL 34747</p>
 
+    <div class="loc-mapa">
+      <iframe
+        src="https://maps.google.com/maps?q=Columbia%20Restaurant%20649%20Front%20St%20Celebration%20FL%2034747&z=16&output=embed"
+        title="Mapa del Restaurante Columbia, Celebration, Florida"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+
     <a href="https://www.google.com/maps/place/Columbia+Restaurant+-+Celebration/@28.3179541,-81.5392251,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd7f353792d363:0x789507b87fa885ee!8m2!3d28.3179541!4d-81.5392251!16s%2Fg%2F1tk_q296" target="_blank" rel="noopener"
        class="btn btn-gold" style="max-width:280px;margin:0 auto 8px;display:flex">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-      Cómo llegar · Maps
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cómo llegar
     </a>
 
     <div class="loc-wave loc-wave-bot" aria-hidden="true">
@@ -1207,8 +1243,8 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 
     <a href="https://www.google.com/maps/place/Columbia+Restaurant+-+Celebration/@28.3179541,-81.5392251,17z/data=!3m1!4b1!4m6!3m5!1s0x88dd7f353792d363:0x789507b87fa885ee!8m2!3d28.3179541!4d-81.5392251!16s%2Fg%2F1tk_q296" target="_blank" rel="noopener"
        class="btn btn-gold" style="max-width:280px;margin:0 auto 8px;display:flex">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-      Cómo llegar · Maps
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cómo llegar
     </a>
 
     <div class="loc-wave loc-wave-bot" aria-hidden="true">
@@ -1231,7 +1267,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
      target="_blank" rel="noopener" id="calBtn"
      class="btn btn-gold" style="max-width:310px;margin:0 auto;display:flex">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-    Agregar a Google Calendar
+    Agregar al calendario
   </a>
 </section>
 
@@ -1257,7 +1293,7 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
       <div class="itv3-gem"></div>
       <div class="itv3-time">7:00 <span class="itv3-mer">pm</span></div>
       <div class="itv3-ev">Ceremonia</div>
-      <div class="itv3-sub">Celebración de nuestra unión civil</div>
+      <div class="itv3-sub">Celebración de nuestra boda civil</div>
     </div>
 
     <div class="itv3-item">
