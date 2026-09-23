@@ -939,6 +939,26 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 /* el boton necesita ancho: Cinzel en versalitas ocupa mas que Cormorant */
 .btn{letter-spacing:1.8px!important;padding-left:12px!important;padding-right:12px!important}
 .loc-card .btn-gold{max-width:300px!important}
+
+/* ── ACOMPANANOS EN LINEA (Zoom) ──────────────────────────────────────
+   Recordatorio para los invitados que asisten a distancia. Todavia no
+   hay liga: la novia la crea unos dias antes.                          */
+#zoom{position:relative;overflow:hidden;text-align:center;}
+#zoom>*:not(.sec-floral){position:relative;z-index:1}
+.zoom-card{max-width:360px;margin:6px auto 0;padding:30px 24px 26px;
+  background:rgba(255,250,240,.58);border:1px solid rgba(140,148,153,.34);border-radius:16px;
+  box-shadow:0 10px 30px rgba(60,70,58,.10);backdrop-filter:blur(2px);}
+.zoom-logo{width:132px;height:auto;display:block;margin:0 auto 18px;
+  filter:drop-shadow(0 2px 8px rgba(12,92,255,.18));}
+.zoom-text{font-family:'Cinzel',serif;font-size:17px;font-weight:600;line-height:1.6;
+  color:var(--cream);margin:0 auto 20px;max-width:300px;}
+.zoom-aviso{display:flex;flex-direction:column;gap:7px;padding:15px 16px;
+  border-radius:11px;background:rgba(132,141,146,.10);border:1px solid rgba(140,148,153,.30);}
+.zoom-aviso-ttl{font-family:'Cinzel',serif;font-size:16px;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);}
+.zoom-aviso-sub{font-family:'Cinzel',serif;font-size:16px;font-weight:500;
+  line-height:1.55;color:var(--silver-ink);}
+@media (max-width:380px){.zoom-card{padding:26px 18px 22px}.zoom-logo{width:118px}}
 </style>
 </head>
 <body>
@@ -1429,7 +1449,24 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 </section>
 
 
-<!-- ════════════════ 12. RSVP ═══════════════════════════ -->
+<!-- ════════════════ 12. ZOOM ═══════════════════════════ -->
+<section id="zoom">
+  <div class="sec-floral" style="background-image:url('./bg-floral-5.jpg')"></div>
+  <span class="lbl">Desde donde estés</span>
+  <h2 class="ttl">Acompáñanos en Línea</h2>
+  <div class="adorno-nupcial" aria-hidden="true"><svg class="an-svg" viewBox="0 0 320 44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M160 7 C154 15 154 24 160 31 C166 24 166 15 160 7Z"/><path d="M159 29 C149 29 142 23 144 16 C151 18 157 23 159 29Z"/><path d="M161 29 C171 29 178 23 176 16 C169 18 163 23 161 29Z"/><g id="an7-tallo"><path d="M184 26 L296 26 C302 26 304 20 299 18"/><circle cx="190" cy="26" r="1.8"/></g><g transform="translate(320,0) scale(-1,1)"><use href="#an7-tallo"/></g></svg></div>
+
+  <div class="zoom-card">
+    <img class="zoom-logo" src="./zoom-logo.png" alt="Zoom" width="232" height="52" loading="lazy">
+    <p class="zoom-text">Si no puedes acompañarnos en persona, podrás ser parte de la ceremonia desde donde te encuentres.</p>
+    <div class="zoom-aviso">
+      <span class="zoom-aviso-ttl">Enlace próximamente</span>
+      <span class="zoom-aviso-sub">Compartiremos el enlace de la reunión unos días antes del 11 de octubre.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ 13. RSVP ═══════════════════════════ -->
 <section id="rsvp" style="position:relative;overflow:hidden;">
   <div class="sec-floral" style="background-image:url('./bg-floral-4.jpg')"></div>
   <div style="position:relative;z-index:1;">

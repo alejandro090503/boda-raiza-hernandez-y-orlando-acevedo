@@ -23,6 +23,7 @@ Todo vive en `index.html` (markup + CSS + JS). No hay build: Vercel sirve la car
 | `symphony.woff` | Symphony Pro, la caligráfica de los nombres y los títulos (tomada de `boda-victoria-y-eduardo`) |
 | `venue-1.jpg` / `venue-2.jpg` | Restaurante Columbia (exterior / interior) |
 | `caballero.png` / `dama.png` | Figuras del código de vestimenta |
+| `zoom-logo.png` | Logo oficial de Zoom (232×52, del CDN de zoom.com) para la sección en línea |
 | `og.jpg` | Open Graph 1200×630 — encuadre cerrado al sobre y al sello |
 
 ## Escena de los camiones
@@ -79,6 +80,12 @@ itinerario, bajo la Cena de las 7:30.
 Además del botón "Cómo llegar" con pin, la tarjeta de la ceremonia lleva el **mapa embebido**
 a la vista (`maps.google.com/maps?q=...&output=embed`, sin API key, `loading="lazy"`): la novia
 no encontraba el enlace.
+
+## Acompáñanos en línea
+
+Sección `#zoom`, justo encima de la confirmación. Por ahora es solo un recordatorio para los
+invitados que asisten a distancia: **todavía no hay liga**, la novia la crea unos días antes.
+Cuando la tenga, basta con cambiar el bloque `.zoom-aviso` por un botón.
 
 ## RSVP
 
