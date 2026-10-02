@@ -90,7 +90,7 @@ Cuando la tenga, basta con cambiar el bloque `.zoom-aviso` por un botón.
 ## RSVP
 
 Confirmaciones vía [panel-invitados.vercel.app](https://panel-invitados.vercel.app).
-Sin WhatsApp. Cada invitado abre `?para=Nombre&pases=N`. Fecha límite: 25 de septiembre de 2026.
+Sin WhatsApp. Cada invitado abre `?para=Nombre&pases=N`. Fecha límite: **7 de octubre de 2026**.
 
 ## Pendientes
 
