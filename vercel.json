@@ -4,5 +4,12 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/album",
+      "destination": "https://panel-invitados.vercel.app/subir/boda-raiza-y-orlando",
+      "permanent": false
+    }
+  ]
 }
