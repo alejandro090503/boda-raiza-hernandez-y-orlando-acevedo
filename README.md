@@ -87,9 +87,10 @@ Sección `#zoom`, hoy la **última** de la invitación. Lleva una cuenta regresi
 **6:00 pm hora de Florida** del 11 de octubre, que es cuando se habilita el enlace. El huso va
 explícito (`2026-10-11T18:00:00-04:00`), así que el contador es correcto desde cualquier país.
 
-Cuando exista la URL de la reunión basta con ponerla en `ZOOM_URL`, al principio del bloque
-`ENLACE DE ZOOM` del script: el aviso se convierte solo en el botón **Entrar a la ceremonia**.
-Mientras esté vacía, al llegar la hora el aviso pasa a "Ya puedes entrar" sin botón.
+Al dar la hora el aviso se pone en azul y aparece el botón **Entrar ahora** con la contraseña
+debajo. La liga y la contraseña viven en `ZOOM_URL` y `ZOOM_PASS`, al principio del bloque
+`ENLACE DE ZOOM` del script. La liga ya trae el `pwd` embebido, pero algunos clientes de Zoom
+la piden a mano, por eso va visible.
 
 ## RSVP — retirado el día del evento
 
