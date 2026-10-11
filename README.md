@@ -83,14 +83,20 @@ no encontraba el enlace.
 
 ## Acompáñanos en línea
 
-Sección `#zoom`, justo encima de la confirmación. Por ahora es solo un recordatorio para los
-invitados que asisten a distancia: **todavía no hay liga**, la novia la crea unos días antes.
-Cuando la tenga, basta con cambiar el bloque `.zoom-aviso` por un botón.
+Sección `#zoom`, hoy la **última** de la invitación. Lleva una cuenta regresiva a las
+**6:00 pm hora de Florida** del 11 de octubre, que es cuando se habilita el enlace. El huso va
+explícito (`2026-10-11T18:00:00-04:00`), así que el contador es correcto desde cualquier país.
 
-## RSVP
+Cuando exista la URL de la reunión basta con ponerla en `ZOOM_URL`, al principio del bloque
+`ENLACE DE ZOOM` del script: el aviso se convierte solo en el botón **Entrar a la ceremonia**.
+Mientras esté vacía, al llegar la hora el aviso pasa a "Ya puedes entrar" sin botón.
 
-Confirmaciones vía [panel-invitados.vercel.app](https://panel-invitados.vercel.app).
-Sin WhatsApp. Cada invitado abre `?para=Nombre&pases=N`. Fecha límite: **7 de octubre de 2026**.
+## RSVP — retirado el día del evento
+
+Las confirmaciones iban por [panel-invitados.vercel.app](https://panel-invitados.vercel.app)
+(`?para=Nombre&pases=N`, fecha límite 7 de octubre). **La sección se eliminó el 11 de octubre**,
+el día de la boda: ya no tenía sentido pedir confirmaciones. El CSS `.rsvp-*` sigue en el
+archivo pero no se usa, y el script sale temprano si no encuentra `#rsvp`.
 
 ## Pendientes
 

@@ -967,6 +967,26 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
 .zoom-aviso-sub{font-family:'Cinzel',serif;font-size:16px;font-weight:500;
   line-height:1.55;color:var(--silver-ink);}
 @media (max-width:380px){.zoom-card{padding:26px 18px 22px}.zoom-logo{width:118px}}
+
+/* ── CUENTA REGRESIVA DEL ENLACE DE ZOOM ──────────────────────────────
+   El dia del evento. A las 6:00 pm (hora de Florida) se habilita.     */
+.zoom-cd{display:flex;align-items:flex-start;justify-content:center;gap:6px;margin:4px 0 2px;}
+.zoom-cd-u{display:flex;flex-direction:column;align-items:center;min-width:52px;}
+.zoom-cd-n{font-family:'Cinzel',serif;font-size:34px;font-weight:700;line-height:1;
+  color:var(--gold-deep);font-variant-numeric:tabular-nums;}
+.zoom-cd-l{font-family:'Cinzel',serif;font-size:16px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--silver-ink);margin-top:5px;}
+.zoom-cd-sep{font-family:'Cinzel',serif;font-size:30px;font-weight:700;line-height:1;
+  color:var(--gold);opacity:.55;padding-top:1px;}
+/* cuando ya es la hora */
+.zoom-aviso.is-live{background:rgba(12,92,255,.08);border-color:rgba(12,92,255,.32);}
+.zoom-aviso.is-live .zoom-aviso-ttl{color:#0B5CFF;}
+.zoom-aviso.is-live .zoom-cd{display:none;}
+.zoom-live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#0B5CFF;
+  margin-right:9px;vertical-align:baseline;animation:zoomPulse 1.6s ease-in-out infinite;}
+@keyframes zoomPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.82)}}
+@media (prefers-reduced-motion: reduce){.zoom-live-dot{animation:none}}
+@media (max-width:380px){.zoom-cd-n{font-size:30px}.zoom-cd-u{min-width:46px}}
 </style>
 </head>
 <body>
@@ -1467,81 +1487,19 @@ section.has-sec-waves{padding-top:84px;padding-bottom:86px}
   <div class="zoom-card">
     <img class="zoom-logo" src="./zoom-logo.png" alt="Zoom" width="232" height="52" loading="lazy">
     <p class="zoom-text">Si no puedes acompañarnos en persona, podrás ser parte de la ceremonia desde donde te encuentres.</p>
-    <div class="zoom-aviso">
-      <span class="zoom-aviso-ttl">Enlace próximamente</span>
-      <span class="zoom-aviso-sub">Compartiremos el enlace de la reunión unos días antes del 11 de octubre.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ════════════════ 13. RSVP ═══════════════════════════ -->
-<section id="rsvp" style="position:relative;overflow:hidden;">
-  <div class="sec-floral" style="background-image:url('./bg-floral-4.jpg')"></div>
-  <div style="position:relative;z-index:1;">
-    <div class="rsvp-card">
-      <svg class="rsvp-corner rsvp-corner--tl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
-      <svg class="rsvp-corner rsvp-corner--tr" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
-      <svg class="rsvp-corner rsvp-corner--bl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
-      <svg class="rsvp-corner rsvp-corner--br" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--gold)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--gold)" opacity=".5"/></svg>
-
-      <div class="rsvp-inner">
-        <svg class="rsvp-ornament" viewBox="0 0 320 56" fill="none" aria-hidden="true">
-          <g stroke="var(--gold)" stroke-width=".9" opacity=".8" fill="none">
-            <path d="M18 28 Q50 10 82 28 Q106 42 130 28"/>
-            <path d="M190 28 Q214 42 238 28 Q270 10 302 28"/>
-            <circle cx="160" cy="28" r="5.5"/>
-            <circle cx="160" cy="28" r="2" fill="var(--gold)" stroke="none"/>
-            <path d="M148 28 L154 28" opacity=".5"/>
-            <path d="M166 28 L172 28" opacity=".5"/>
-            <path d="M154 20 Q160 13 166 20" opacity=".55"/>
-            <path d="M154 36 Q160 43 166 36" opacity=".55"/>
-          </g>
-        </svg>
-
-        <span class="lbl" style="color:var(--gold-lt);">Confirmación de asistencia</span>
-        <h2 class="rsvp-title">Tu presencia <em>significa</em> todo</h2>
-        <p class="rsvp-text">Por favor confirma tu asistencia antes del <strong style="color:var(--gold-deep);font-weight:700;">3 de Octubre de 2026</strong>. Nos emociona saber que estarás con nosotros.</p>
-
-        <p id="rsvp-name-display" style="display:none;font-family:var(--script);font-size:clamp(30px,7vw,44px);color:var(--silver-ink);line-height:1.2;margin:18px auto 4px;"></p>
-
-        <div class="rsvp-divider">
-          <svg class="rsvp-divider-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
-        </div>
-
-        <p id="rsvp-pases-note"></p>
-
-        <div class="rsvp-pases-display" id="rsvp-pases-display">
-          <div class="rsvp-pases-label">Número de pases</div>
-          <div class="rsvp-pases-num" id="rsvp-pases-num">1</div>
-        </div>
-
-        <p class="rsvp-aviso-link" id="rsvp-aviso-link">Para confirmar necesitas abrir el enlace personalizado que te enviamos por WhatsApp. Ese enlace lleva los nombres de tu invitación; si lo abres desde un reenvío o escribiendo la dirección a mano, no podemos identificarla.</p>
-
-        <div id="rsvp-bandeja">
-          <div class="rsvp-asignados" id="rsvp-asignados" style="display:none"></div>
-
-          <button class="rsvp-btn" id="rsvp-confirm-btn" type="button">
-            <span id="rsvp-btn-text">Confirmar</span>
-          </button>
-        </div>
-
-        <div class="rsvp-gracias" id="rsvp-gracias" style="display:none">
-          <p class="rsvp-gracias-title" id="rsvp-gracias-title"></p>
-          <p class="rsvp-gracias-sub" id="rsvp-gracias-sub"></p>
-          <button class="rsvp-editar-btn" id="rsvp-editar-btn" type="button">Modificar mi respuesta</button>
-        </div>
-
-        <p id="rsvp-feedback"></p>
-
-        <div class="rsvp-deadline">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
-          Fecha límite · 7 de Octubre de 2026
-        </div>
+    <div class="zoom-aviso" id="zoomAviso">
+      <span class="zoom-aviso-ttl" id="zoomAvisoTtl">El enlace se habilita en</span>
+      <div class="zoom-cd" id="zoomCd">
+        <div class="zoom-cd-u"><span class="zoom-cd-n" id="zCdH">00</span><span class="zoom-cd-l">hrs</span></div>
+        <span class="zoom-cd-sep">:</span>
+        <div class="zoom-cd-u"><span class="zoom-cd-n" id="zCdM">00</span><span class="zoom-cd-l">min</span></div>
+        <span class="zoom-cd-sep">:</span>
+        <div class="zoom-cd-u"><span class="zoom-cd-n" id="zCdS">00</span><span class="zoom-cd-l">seg</span></div>
       </div>
+      <span class="zoom-aviso-sub" id="zoomAvisoSub">Hoy a las 6:00 pm, hora de Florida, aparecerá aquí el enlace para entrar a la ceremonia.</span>
     </div>
   </div>
 </section>
-
 
 <!-- ════════════════ 13. FOOTER ═════════════════════════ -->
 <footer id="footer">
@@ -2066,6 +2024,8 @@ function toast(msg) {
 /* Una tarjeta por invitado que los novios asignaron en el panel, cada una con
    su Asistiré / No asistiré. El API particiona por `url_boda`. */
 (function(){
+  // el dia del evento se retiro la seccion: sin ella no hay nada que hacer
+  if (!document.getElementById('rsvp')) return;
   var PANEL_API = 'https://panel-invitados.vercel.app/api/confirmar';
   var RSVP_URL  = 'https://boda-raiza-hernandez-y-orlando-acevedo.vercel.app';
   var DEADLINE  = new Date(2026, 9, 3, 23, 59, 59, 999);
@@ -2594,14 +2554,6 @@ function scrollAnims() {
   /* ── gifts ─────────────────────────────────────────── */
   /* La entrada la maneja initEnvelopeRain(): el sobre cae y aterriza. */
 
-  /* ── RSVP ──────────────────────────────────────────── */
-  gsap.from('#rsvp .ornament-h', { opacity:0, scaleX:0, duration:1, ease:e1, scrollTrigger:{ trigger:'#rsvp', start:'top 86%', once:true } });
-  gsap.fromTo('.rsvp-card',{opacity:0,y:40,scale:.97},{opacity:1,y:0,scale:1,duration:1.2,ease:'power4.out',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%',once:true}});
-  gsap.fromTo('.rsvp-ornament',{opacity:0,scaleX:0},{opacity:1,scaleX:1,duration:1.2,ease:e1,scrollTrigger:{trigger:'.rsvp-ornament',start:'top 85%',once:true}});
-  gsap.fromTo('.rsvp-title,.rsvp-text,.rsvp-divider',{opacity:0,y:16},{opacity:1,y:0,duration:1.1,stagger:.1,scrollTrigger:{trigger:'.rsvp-card',start:'top 80%',once:true}});
-  gsap.fromTo('.rsvp-btn',{opacity:0,y:24,scale:.92},{opacity:1,y:0,scale:1,duration:1.2,ease:e2,scrollTrigger:{trigger:'.rsvp-btn',start:'top 88%',once:true}});
-  gsap.fromTo('.rsvp-deadline',{opacity:0,letterSpacing:'1em'},{opacity:1,letterSpacing:'.4em',duration:1,scrollTrigger:{trigger:'.rsvp-deadline',start:'top 92%',once:true}});
-  gsap.fromTo('.rsvp-corner',{opacity:0,scale:.5},{opacity:1,scale:1,duration:1,stagger:.08,ease:'back.out(2)',scrollTrigger:{trigger:'.rsvp-card',start:'top 82%',once:true}});
 
   /* ── footer ────────────────────────────────────────── */
   gsap.from('.ft-orn', { opacity:0, scaleX:0, duration:.8, ease:e1, scrollTrigger:{ trigger:'#footer', start:'top 90%', once:true } });
@@ -2657,7 +2609,7 @@ function initItinerary(){
 
 /* ── SECTION WAVES ───────────────────────────────────── */
 function addSectionWaves() {
-  const targets = ['versiculo','calendar','itinerary','gifts','dresscode','family','gallery','rsvp','kids-policy','qr-album'];
+  const targets = ['versiculo','calendar','itinerary','gifts','dresscode','family','gallery','zoom','kids-policy','qr-album'];
   const footer  = document.getElementById('footer');
   const els = targets.map(id => document.getElementById(id)).filter(Boolean);
   if (footer) els.push(footer);
@@ -2679,7 +2631,7 @@ function addSectionWaves() {
 
 /* ── SECTION MEDALS ──────────────────────────────────── */
 function addSectionMedals() {
-  const map = { 'calendar':'✧', 'itinerary':'❃', 'gifts':'✦', 'dresscode':'❁', 'family':'❖', 'rsvp':'✹', 'kids-policy':'✦', 'qr-album':'✦' };
+  const map = { 'calendar':'✧', 'itinerary':'❃', 'gifts':'✦', 'dresscode':'❁', 'family':'❖', 'zoom':'✹', 'kids-policy':'✦', 'qr-album':'✦' };
   Object.keys(map).forEach(id => {
     const sec = document.getElementById(id); if (!sec) return;
     const lbl = sec.querySelector('.lbl'); if (!lbl) return;
@@ -2764,6 +2716,50 @@ function addAuras() {
   ['pointerdown','touchend','click','keydown'].forEach(function(ev){
     document.addEventListener(ev,onGesture,{capture:true,passive:true});
   });
+})();
+
+/* ── ENLACE DE ZOOM: se habilita hoy a las 6:00 pm (hora de Florida) ──
+   Con el huso explicito el contador es correcto desde cualquier pais.
+   Cuando haya URL de la reunion, basta con ponerla en ZOOM_URL y el
+   aviso se convierte solo en el boton de entrar.                      */
+(function () {
+  var ZOOM_URL  = '';                                   // <- la liga, cuando exista
+  var ZOOM_HORA = new Date('2026-10-11T18:00:00-04:00');
+
+  var aviso = document.getElementById('zoomAviso');
+  if (!aviso) return;
+  var ttl = document.getElementById('zoomAvisoTtl'),
+      sub = document.getElementById('zoomAvisoSub'),
+      h   = document.getElementById('zCdH'),
+      m   = document.getElementById('zCdM'),
+      sg  = document.getElementById('zCdS');
+
+  function pad2(n){ return String(n).padStart(2, '0'); }
+
+  function envivo() {
+    aviso.classList.add('is-live');
+    ttl.innerHTML = '<span class="zoom-live-dot"></span>Ya puedes entrar';
+    if (ZOOM_URL) {
+      sub.innerHTML = '<a class="btn btn-gold" style="margin-top:10px" href="' +
+        ZOOM_URL + '" target="_blank" rel="noopener">Entrar a la ceremonia</a>';
+    } else {
+      sub.textContent = 'La ceremonia está por comenzar. Si recibiste el enlace por mensaje, úsalo para entrar.';
+    }
+  }
+
+  function tic() {
+    var falta = ZOOM_HORA - new Date();
+    if (falta <= 0) { envivo(); return true; }
+    var t = Math.floor(falta / 1000);
+    h.textContent  = pad2(Math.floor(t / 3600));
+    m.textContent  = pad2(Math.floor(t / 60) % 60);
+    sg.textContent = pad2(t % 60);
+    return false;
+  }
+
+  if (!tic()) {
+    var id = setInterval(function () { if (tic()) clearInterval(id); }, 1000);
+  }
 })();
 </script>
 </body>
